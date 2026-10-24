@@ -54,8 +54,8 @@ function broadcast(data) {
 // Inject broadcaster into routes
 routes.setBroadcaster(broadcast);
 
-// Fallback for SPA routing
-app.get('*', (req, res) => {
+// Fallback for SPA routing (Express 5 compatible)
+app.use((req, res) => {
   const indexPath = path.join(clientDist, 'index.html');
   if (require('fs').existsSync(indexPath)) {
     res.sendFile(indexPath);
