@@ -1,0 +1,1678 @@
+{
+  "leads": {
+    "+919000000001": {
+      "phone": "+919000000001",
+      "language": "hi",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "M1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.052Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.047Z"
+    },
+    "+919000000002": {
+      "phone": "+919000000002",
+      "language": "en",
+      "stage": "test_drive_booked",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D12",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "Uber",
+              "Ola"
+            ],
+            "age_band": "31_40",
+            "hub": "hsr",
+            "name": "Vikram Singh",
+            "doc_consent": true,
+            "doc_consent_time": "2026-10-24T16:17:16.068Z",
+            "slotId": "hsr-1",
+            "slotText": "Thu 23 Oct 10:30"
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.080Z"
+        }
+      },
+      "docs": {
+        "licence_front": {
+          "fileId": "doc_licence_front_1792858636069",
+          "type": "licence_front",
+          "status": "uploaded",
+          "uploadedAt": "2026-10-24T16:17:16.069Z",
+          "encrypted": true
+        },
+        "licence_back": {
+          "fileId": "doc_licence_back_1792858636071",
+          "type": "licence_back",
+          "status": "uploaded",
+          "uploadedAt": "2026-10-24T16:17:16.071Z",
+          "encrypted": true
+        },
+        "aadhaar": {
+          "fileId": "doc_aadhaar_1792858636072",
+          "type": "aadhaar",
+          "status": "uploaded",
+          "uploadedAt": "2026-10-24T16:17:16.072Z",
+          "encrypted": true,
+          "maskedDisplay": "•••• •••• 9876"
+        },
+        "pan": {
+          "fileId": "doc_pan_1792858636074",
+          "type": "pan",
+          "status": "uploaded",
+          "uploadedAt": "2026-10-24T16:17:16.074Z",
+          "encrypted": true
+        },
+        "cheque": {
+          "fileId": "doc_cheque_1792858636076",
+          "type": "cheque",
+          "status": "uploaded",
+          "uploadedAt": "2026-10-24T16:17:16.076Z",
+          "encrypted": true
+        },
+        "selfie": {
+          "fileId": "doc_selfie_1792858636077",
+          "type": "selfie",
+          "status": "uploaded",
+          "uploadedAt": "2026-10-24T16:17:16.077Z",
+          "encrypted": true
+        }
+      },
+      "testDrive": {
+        "slotId": "hsr-1",
+        "slotText": "Thu 23 Oct 10:30",
+        "hub": "hsr",
+        "bookedAt": "2026-10-24T16:17:16.080Z",
+        "status": "booked"
+      },
+      "createdAt": "2026-10-24T16:17:16.053Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "Uber",
+        "Ola"
+      ],
+      "age_band": "31_40",
+      "hub": "hsr",
+      "name": "Vikram Singh"
+    },
+    "+919000000003": {
+      "phone": "+919000000003",
+      "language": "en",
+      "stage": "not_eligible",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "X1",
+          "answers": {
+            "badge": "no"
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.085Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.082Z",
+      "badge": "no"
+    },
+    "+919000000004": {
+      "phone": "+919000000004",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D4",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "Uber",
+              "Rapido"
+            ]
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.095Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.087Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "Uber",
+        "Rapido"
+      ]
+    },
+    "+919000000005": {
+      "phone": "+919000000005",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "M1",
+          "answers": {},
+          "wrongReplyCount": 2,
+          "updatedTime": "2026-10-24T16:17:16.101Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.096Z"
+    },
+    "+919000000006": {
+      "phone": "+919000000006",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D4",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "Uber"
+            ]
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.108Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.102Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "Uber"
+      ]
+    },
+    "+919000000007": {
+      "phone": "+919000000007",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": true,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "M1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.114Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.112Z"
+    },
+    "+919000000008": {
+      "phone": "+919000000008",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "M1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.140Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.134Z"
+    },
+    "+919000000009": {
+      "phone": "+919000000009",
+      "language": "en",
+      "stage": "qualified",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D9d",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "Uber"
+            ],
+            "age_band": "21_30",
+            "hub": "hsr",
+            "name": "Deepak",
+            "doc_consent": true,
+            "doc_consent_time": "2026-10-24T16:17:16.160Z"
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.167Z"
+        }
+      },
+      "docs": {
+        "licence_front": {
+          "status": "missing_sent_later",
+          "uploadedAt": "2026-10-24T16:17:16.162Z"
+        },
+        "licence_back": {
+          "status": "missing_sent_later",
+          "uploadedAt": "2026-10-24T16:17:16.164Z"
+        },
+        "aadhaar": {
+          "status": "missing_sent_later",
+          "uploadedAt": "2026-10-24T16:17:16.167Z"
+        }
+      },
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.141Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "Uber"
+      ],
+      "age_band": "21_30",
+      "hub": "hsr",
+      "name": "Deepak"
+    },
+    "+919000000010": {
+      "phone": "+919000000010",
+      "language": "en",
+      "stage": "qualified",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D6",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "Uber"
+            ],
+            "age_band": "21_30",
+            "hub": "hsr"
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.183Z",
+          "savedResumeStep": null
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.168Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "Uber"
+      ],
+      "age_band": "21_30",
+      "hub": "hsr"
+    },
+    "+919000000011": {
+      "phone": "+919000000011",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "R2_CANCEL_REASON",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.189Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.184Z",
+      "r2SentAt": "2026-10-24T16:17:16.186Z",
+      "r2Status": "awaiting_reply"
+    },
+    "+919000000012": {
+      "phone": "+919000000012",
+      "language": null,
+      "stage": "new",
+      "optedOut": true,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "L1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.195Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.190Z"
+    },
+    "+919000000013": {
+      "phone": "+919000000013",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "rider",
+          "step": "B4",
+          "answers": {
+            "ride_type": "Airport drop",
+            "when": "Now, within 1 hour",
+            "isNow": true
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-24T16:17:16.203Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-24T16:17:16.196Z"
+    }
+  },
+  "bookings": {},
+  "escalations": [
+    {
+      "id": "ESC-mvmlqpbf",
+      "phone": "+919000000013",
+      "step": "B2",
+      "topic": "URGENT: Now Ride Booking",
+      "reason": "Rider requested ride NOW (within 1 hour)",
+      "question": "Immediate ride request from +919000000013",
+      "leadSummary": {
+        "ride_type": "Airport drop",
+        "when": "Now, within 1 hour",
+        "isNow": true
+      },
+      "status": "open",
+      "createdAt": "2026-10-24T16:17:16.203Z",
+      "notes": ""
+    },
+    {
+      "id": "ESC-mvmlqpb4",
+      "phone": "+919000000012",
+      "step": "L1",
+      "topic": "Unanswered Question",
+      "reason": "Question not found in facts sheet",
+      "question": "cancel",
+      "leadSummary": {},
+      "status": "open",
+      "createdAt": "2026-10-24T16:17:16.192Z",
+      "notes": ""
+    },
+    {
+      "id": "ESC-mvmlqp9i",
+      "phone": "+919000000007",
+      "step": "M1",
+      "topic": "General Support",
+      "reason": "User message during active handoff",
+      "question": "Are you there?",
+      "leadSummary": {},
+      "status": "open",
+      "createdAt": "2026-10-24T16:17:16.134Z",
+      "notes": ""
+    },
+    {
+      "id": "ESC-mvmlqp8z",
+      "phone": "+919000000007",
+      "step": "M1",
+      "topic": "Team Handoff",
+      "reason": "User requested agent via option 9",
+      "question": "9",
+      "leadSummary": {},
+      "status": "open",
+      "createdAt": "2026-10-24T16:17:16.115Z",
+      "notes": ""
+    }
+  ],
+  "messages": {
+    "+919000000001": [
+      {
+        "id": "MSG-mvmlqp74-6uq",
+        "timestamp": "2026-10-24T16:17:16.048Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp76-quj",
+        "timestamp": "2026-10-24T16:17:16.050Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nWelcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvmlqp77-wde",
+        "timestamp": "2026-10-24T16:17:16.051Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "२",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp78-e2j",
+        "timestamp": "2026-10-24T16:17:16.052Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "आज हम आपकी कैसे मदद कर सकते हैं?\n1 = मैं Milo के साथ गाड़ी चलाना चाहता हूँ\n2 = राइड बुक करें\n3 = मैं पहले से Milo में गाड़ी चलाता हूँ\n\n0 = मुख्य मेनू · 9 = Milo टीम से बात करें"
+      }
+    ],
+    "+919000000002": [
+      {
+        "id": "MSG-mvmlqp7a-mcx",
+        "timestamp": "2026-10-24T16:17:16.054Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7b-2ft",
+        "timestamp": "2026-10-24T16:17:16.055Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7b-vca",
+        "timestamp": "2026-10-24T16:17:16.055Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7c-aqz",
+        "timestamp": "2026-10-24T16:17:16.056Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7d-y85",
+        "timestamp": "2026-10-24T16:17:16.057Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7f-9av",
+        "timestamp": "2026-10-24T16:17:16.059Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7f-gb2",
+        "timestamp": "2026-10-24T16:17:16.059Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7g-735",
+        "timestamp": "2026-10-24T16:17:16.060Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7h-1lq",
+        "timestamp": "2026-10-24T16:17:16.061Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1 2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7i-wew",
+        "timestamp": "2026-10-24T16:17:16.062Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7i-th8",
+        "timestamp": "2026-10-24T16:17:16.062Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "3",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7j-2p7",
+        "timestamp": "2026-10-24T16:17:16.063Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which hub is closest to you?\n1 = HSR Layout · 2 = Electronic City · 3 = Hebbal · 4 = None of these is near me\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7k-fug",
+        "timestamp": "2026-10-24T16:17:16.064Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7l-18u",
+        "timestamp": "2026-10-24T16:17:16.065Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What is your full name, as on your licence?"
+      },
+      {
+        "id": "MSG-mvmlqp7l-0ol",
+        "timestamp": "2026-10-24T16:17:16.065Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Vikram Singh",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7m-wyw",
+        "timestamp": "2026-10-24T16:17:16.066Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Any questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7m-oc8",
+        "timestamp": "2026-10-24T16:17:16.066Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "4",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7n-vg2",
+        "timestamp": "2026-10-24T16:17:16.067Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "We need photos of your licence, Aadhaar, PAN and bank proof to verify you. Only Milo's team sees them.\n1 = I agree · 2 = Not now\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7o-spm",
+        "timestamp": "2026-10-24T16:17:16.068Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7o-n4u",
+        "timestamp": "2026-10-24T16:17:16.068Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (a) licence front.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqp7p-q8c",
+        "timestamp": "2026-10-24T16:17:16.069Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "",
+        "type": "photo",
+        "mediaUrl": "https://example.com/doc.jpg"
+      },
+      {
+        "id": "MSG-mvmlqp7q-zlu",
+        "timestamp": "2026-10-24T16:17:16.070Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (b) licence back.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqp7r-bak",
+        "timestamp": "2026-10-24T16:17:16.071Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "",
+        "type": "photo",
+        "mediaUrl": "https://example.com/doc.jpg"
+      },
+      {
+        "id": "MSG-mvmlqp7s-p7h",
+        "timestamp": "2026-10-24T16:17:16.072Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (c) Aadhaar, cover the first 8 digits.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqp7s-51e",
+        "timestamp": "2026-10-24T16:17:16.072Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "",
+        "type": "photo",
+        "mediaUrl": "https://example.com/doc.jpg"
+      },
+      {
+        "id": "MSG-mvmlqp7t-84q",
+        "timestamp": "2026-10-24T16:17:16.073Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (d) PAN card.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqp7t-wbz",
+        "timestamp": "2026-10-24T16:17:16.073Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "",
+        "type": "photo",
+        "mediaUrl": "https://example.com/doc.jpg"
+      },
+      {
+        "id": "MSG-mvmlqp7u-kba",
+        "timestamp": "2026-10-24T16:17:16.074Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (e) cancelled cheque or passbook page.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqp7v-0yq",
+        "timestamp": "2026-10-24T16:17:16.075Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "",
+        "type": "photo",
+        "mediaUrl": "https://example.com/doc.jpg"
+      },
+      {
+        "id": "MSG-mvmlqp7w-x4a",
+        "timestamp": "2026-10-24T16:17:16.076Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (f) a selfie.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqp7w-nlt",
+        "timestamp": "2026-10-24T16:17:16.076Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "",
+        "type": "photo",
+        "mediaUrl": "https://example.com/doc.jpg"
+      },
+      {
+        "id": "MSG-mvmlqp7x-nbm",
+        "timestamp": "2026-10-24T16:17:16.077Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Pick a test-drive slot at HSR Layout:\n1 = Thu 23 Oct 10:30 · 2 = Thu 23 Oct 15:00 · 3 = Fri 24 Oct 11:00\n6 = None of these work\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp7y-jjf",
+        "timestamp": "2026-10-24T16:17:16.078Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp7z-t9w",
+        "timestamp": "2026-10-24T16:17:16.079Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thu 23 Oct 10:30 at HSR Layout hub. Bring your original licence.\n1 = Confirm · 2 = Pick another time\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp80-1qv",
+        "timestamp": "2026-10-24T16:17:16.080Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp81-9fr",
+        "timestamp": "2026-10-24T16:17:16.081Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Booked! We'll remind you the evening before and at 8:00 on the day."
+      }
+    ],
+    "+919000000003": [
+      {
+        "id": "MSG-mvmlqp82-o3f",
+        "timestamp": "2026-10-24T16:17:16.082Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp83-u67",
+        "timestamp": "2026-10-24T16:17:16.083Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp84-5ar",
+        "timestamp": "2026-10-24T16:17:16.084Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp85-uwi",
+        "timestamp": "2026-10-24T16:17:16.085Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp85-8bn",
+        "timestamp": "2026-10-24T16:17:16.085Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp86-kms",
+        "timestamp": "2026-10-24T16:17:16.086Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thanks, Driver. Milo needs drivers with a badge licence and at least 1 year driving, age 21–50. Can we message you if this changes?\n1 = Yes · 2 = No\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919000000004": [
+      {
+        "id": "MSG-mvmlqp88-lti",
+        "timestamp": "2026-10-24T16:17:16.088Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp89-wh6",
+        "timestamp": "2026-10-24T16:17:16.089Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp89-6r5",
+        "timestamp": "2026-10-24T16:17:16.089Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8a-ne4",
+        "timestamp": "2026-10-24T16:17:16.090Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8b-p0s",
+        "timestamp": "2026-10-24T16:17:16.091Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8c-7xw",
+        "timestamp": "2026-10-24T16:17:16.092Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8c-v16",
+        "timestamp": "2026-10-24T16:17:16.092Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8d-mch",
+        "timestamp": "2026-10-24T16:17:16.093Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8e-w9r",
+        "timestamp": "2026-10-24T16:17:16.094Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1 3",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8f-w1b",
+        "timestamp": "2026-10-24T16:17:16.095Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919000000005": [
+      {
+        "id": "MSG-mvmlqp8h-tft",
+        "timestamp": "2026-10-24T16:17:16.097Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8i-zfz",
+        "timestamp": "2026-10-24T16:17:16.098Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8j-jmj",
+        "timestamp": "2026-10-24T16:17:16.099Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "7",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8k-d7d",
+        "timestamp": "2026-10-24T16:17:16.100Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nHow can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8k-gqp",
+        "timestamp": "2026-10-24T16:17:16.100Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "7",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8l-j3a",
+        "timestamp": "2026-10-24T16:17:16.101Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Reply 9 and someone from Milo's team will help you.\n\nHow can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919000000006": [
+      {
+        "id": "MSG-mvmlqp8m-qw6",
+        "timestamp": "2026-10-24T16:17:16.102Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8n-0xf",
+        "timestamp": "2026-10-24T16:17:16.103Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8o-60h",
+        "timestamp": "2026-10-24T16:17:16.104Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8p-skt",
+        "timestamp": "2026-10-24T16:17:16.105Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8p-4h0",
+        "timestamp": "2026-10-24T16:17:16.105Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8q-23e",
+        "timestamp": "2026-10-24T16:17:16.106Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8q-hcx",
+        "timestamp": "2026-10-24T16:17:16.106Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8r-gwp",
+        "timestamp": "2026-10-24T16:17:16.107Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8s-yqx",
+        "timestamp": "2026-10-24T16:17:16.108Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8t-uog",
+        "timestamp": "2026-10-24T16:17:16.109Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8t-9rm",
+        "timestamp": "2026-10-24T16:17:16.109Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "what is the deposit?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8v-fg1",
+        "timestamp": "2026-10-24T16:17:16.111Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "The refundable security deposit is ₹10,000, payable at vehicle handover.\n\nYour age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919000000007": [
+      {
+        "id": "MSG-mvmlqp8w-w2h",
+        "timestamp": "2026-10-24T16:17:16.112Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp8x-yh1",
+        "timestamp": "2026-10-24T16:17:16.113Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp8y-bda",
+        "timestamp": "2026-10-24T16:17:16.114Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "9",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9g-y2d",
+        "timestamp": "2026-10-24T16:17:16.132Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "I've passed this to Milo's team. Someone will reply here tomorrow after 9 am."
+      },
+      {
+        "id": "MSG-mvmlqp9h-za2",
+        "timestamp": "2026-10-24T16:17:16.133Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Are you there?",
+        "type": "text"
+      }
+    ],
+    "+919000000008": [
+      {
+        "id": "MSG-mvmlqp9j-koh",
+        "timestamp": "2026-10-24T16:17:16.135Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9k-36y",
+        "timestamp": "2026-10-24T16:17:16.136Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp9l-0m6",
+        "timestamp": "2026-10-24T16:17:16.137Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9m-mpw",
+        "timestamp": "2026-10-24T16:17:16.138Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp9n-l0x",
+        "timestamp": "2026-10-24T16:17:16.139Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "0",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9o-lj3",
+        "timestamp": "2026-10-24T16:17:16.140Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919000000009": [
+      {
+        "id": "MSG-mvmlqp9q-x99",
+        "timestamp": "2026-10-24T16:17:16.142Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9s-353",
+        "timestamp": "2026-10-24T16:17:16.144Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp9s-d70",
+        "timestamp": "2026-10-24T16:17:16.144Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9u-k33",
+        "timestamp": "2026-10-24T16:17:16.146Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp9u-53c",
+        "timestamp": "2026-10-24T16:17:16.146Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9v-pqz",
+        "timestamp": "2026-10-24T16:17:16.147Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp9w-kz9",
+        "timestamp": "2026-10-24T16:17:16.148Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9y-kan",
+        "timestamp": "2026-10-24T16:17:16.150Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqp9y-zqs",
+        "timestamp": "2026-10-24T16:17:16.150Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqp9z-vqd",
+        "timestamp": "2026-10-24T16:17:16.151Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpa0-07i",
+        "timestamp": "2026-10-24T16:17:16.152Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpa2-u9w",
+        "timestamp": "2026-10-24T16:17:16.154Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which hub is closest to you?\n1 = HSR Layout · 2 = Electronic City · 3 = Hebbal · 4 = None of these is near me\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpa2-dyr",
+        "timestamp": "2026-10-24T16:17:16.154Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpa4-s2b",
+        "timestamp": "2026-10-24T16:17:16.156Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What is your full name, as on your licence?"
+      },
+      {
+        "id": "MSG-mvmlqpa4-dcr",
+        "timestamp": "2026-10-24T16:17:16.156Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Deepak",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpa5-3hv",
+        "timestamp": "2026-10-24T16:17:16.157Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Any questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpa6-5pu",
+        "timestamp": "2026-10-24T16:17:16.158Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "4",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpa7-4su",
+        "timestamp": "2026-10-24T16:17:16.159Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "We need photos of your licence, Aadhaar, PAN and bank proof to verify you. Only Milo's team sees them.\n1 = I agree · 2 = Not now\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpa7-ne9",
+        "timestamp": "2026-10-24T16:17:16.159Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpa9-tsv",
+        "timestamp": "2026-10-24T16:17:16.161Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (a) licence front.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqpaa-fri",
+        "timestamp": "2026-10-24T16:17:16.162Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "8",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpab-wtj",
+        "timestamp": "2026-10-24T16:17:16.163Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (b) licence back.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqpab-9n2",
+        "timestamp": "2026-10-24T16:17:16.163Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "8",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpac-6n0",
+        "timestamp": "2026-10-24T16:17:16.164Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (c) Aadhaar, cover the first 8 digits.\nReply 8 = I'll send this later"
+      },
+      {
+        "id": "MSG-mvmlqpad-1kk",
+        "timestamp": "2026-10-24T16:17:16.165Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "here is my aadhaar card number",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpae-lhi",
+        "timestamp": "2026-10-24T16:17:16.166Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please send a photo or PDF file of the requested document, or reply 8 to send it later."
+      },
+      {
+        "id": "MSG-mvmlqpaf-ks5",
+        "timestamp": "2026-10-24T16:17:16.167Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "8",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpag-2gl",
+        "timestamp": "2026-10-24T16:17:16.168Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send a photo of: (d) PAN card.\nReply 8 = I'll send this later"
+      }
+    ],
+    "+919000000010": [
+      {
+        "id": "MSG-mvmlqpah-adt",
+        "timestamp": "2026-10-24T16:17:16.169Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpai-c4n",
+        "timestamp": "2026-10-24T16:17:16.170Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpaj-t1h",
+        "timestamp": "2026-10-24T16:17:16.171Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpam-55i",
+        "timestamp": "2026-10-24T16:17:16.174Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpam-3g6",
+        "timestamp": "2026-10-24T16:17:16.174Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpan-oqg",
+        "timestamp": "2026-10-24T16:17:16.175Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpao-pfz",
+        "timestamp": "2026-10-24T16:17:16.176Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpap-ls1",
+        "timestamp": "2026-10-24T16:17:16.177Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpap-m60",
+        "timestamp": "2026-10-24T16:17:16.177Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpaq-tij",
+        "timestamp": "2026-10-24T16:17:16.178Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpar-jac",
+        "timestamp": "2026-10-24T16:17:16.179Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpas-ist",
+        "timestamp": "2026-10-24T16:17:16.180Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which hub is closest to you?\n1 = HSR Layout · 2 = Electronic City · 3 = Hebbal · 4 = None of these is near me\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpas-ts7",
+        "timestamp": "2026-10-24T16:17:16.180Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpat-c05",
+        "timestamp": "2026-10-24T16:17:16.181Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What is your full name, as on your licence?"
+      },
+      {
+        "id": "MSG-mvmlqpav-442",
+        "timestamp": "2026-10-24T16:17:16.183Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome back. 1 = Continue where you left off · 2 = Start again\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpav-1l6",
+        "timestamp": "2026-10-24T16:17:16.183Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpaw-fiv",
+        "timestamp": "2026-10-24T16:17:16.184Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What is your full name, as on your licence?"
+      }
+    ],
+    "+919000000011": [
+      {
+        "id": "MSG-mvmlqpaz-zkf",
+        "timestamp": "2026-10-24T16:17:16.187Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your test drive is today at Thu 23 Oct 10:30. 1 = I'm coming · 2 = Change the time · 3 = Cancel\n\n0 = Main menu · 9 = Talk to Milo's team",
+        "isR2": true
+      },
+      {
+        "id": "MSG-mvmlqpb1-q5e",
+        "timestamp": "2026-10-24T16:17:16.189Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your slot has been cancelled. What was the reason?\n1 = Got another job · 2 = Personal emergency · 3 = Hub too far · 4 = Other"
+      }
+    ],
+    "+919000000012": [
+      {
+        "id": "MSG-mvmlqpb3-ub2",
+        "timestamp": "2026-10-24T16:17:16.191Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "cancel",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpb5-tol",
+        "timestamp": "2026-10-24T16:17:16.193Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "I don't have that yet, I've asked Milo's team.\n\nWelcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvmlqpb6-z50",
+        "timestamp": "2026-10-24T16:17:16.194Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "STOP",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpb7-as8",
+        "timestamp": "2026-10-24T16:17:16.195Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "You have been opted out of all Milo messages. Send START anytime to opt back in."
+      }
+    ],
+    "+919000000013": [
+      {
+        "id": "MSG-mvmlqpb8-h1n",
+        "timestamp": "2026-10-24T16:17:16.196Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpb9-edw",
+        "timestamp": "2026-10-24T16:17:16.197Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpba-3zp",
+        "timestamp": "2026-10-24T16:17:16.198Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpbc-yde",
+        "timestamp": "2026-10-24T16:17:16.200Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What kind of ride?\n1 = Airport drop · 2 = Airport pickup · 3 = Local, by the hour · 4 = Outstation · 5 = Office account\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpbc-c2o",
+        "timestamp": "2026-10-24T16:17:16.200Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpbe-hr5",
+        "timestamp": "2026-10-24T16:17:16.202Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "When?\n1 = Now, within 1 hour · 2 = Later today · 3 = Tomorrow · 4 = Another date\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvmlqpbe-wgw",
+        "timestamp": "2026-10-24T16:17:16.202Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvmlqpbg-007",
+        "timestamp": "2026-10-24T16:17:16.204Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send your pickup location (📎 → Location) or type the address. For airport pickup: type your flight number."
+      }
+    ]
+  },
+  "slots": {
+    "hsr-1": {
+      "id": "hsr-1",
+      "label": "Thu 23 Oct 10:30",
+      "time": "10:30",
+      "date": "2026-10-23",
+      "capacity": 3,
+      "booked": 1,
+      "hubId": "hsr",
+      "hubName": "HSR Layout",
+      "bookedLeads": [
+        "+919000000002"
+      ],
+      "heldUntil": "2026-10-24T16:32:16.185Z"
+    },
+    "hsr-2": {
+      "id": "hsr-2",
+      "label": "Thu 23 Oct 15:00",
+      "time": "15:00",
+      "date": "2026-10-23",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "hsr",
+      "hubName": "HSR Layout",
+      "bookedLeads": []
+    },
+    "hsr-3": {
+      "id": "hsr-3",
+      "label": "Fri 24 Oct 11:00",
+      "time": "11:00",
+      "date": "2026-10-24",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "hsr",
+      "hubName": "HSR Layout",
+      "bookedLeads": []
+    },
+    "ec-1": {
+      "id": "ec-1",
+      "label": "Thu 23 Oct 11:00",
+      "time": "11:00",
+      "date": "2026-10-23",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "ecity",
+      "hubName": "Electronic City",
+      "bookedLeads": []
+    },
+    "ec-2": {
+      "id": "ec-2",
+      "label": "Thu 23 Oct 16:00",
+      "time": "16:00",
+      "date": "2026-10-23",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "ecity",
+      "hubName": "Electronic City",
+      "bookedLeads": []
+    },
+    "ec-3": {
+      "id": "ec-3",
+      "label": "Fri 24 Oct 14:00",
+      "time": "14:00",
+      "date": "2026-10-24",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "ecity",
+      "hubName": "Electronic City",
+      "bookedLeads": []
+    },
+    "heb-1": {
+      "id": "heb-1",
+      "label": "Thu 23 Oct 10:00",
+      "time": "10:00",
+      "date": "2026-10-23",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "hebbal",
+      "hubName": "Hebbal",
+      "bookedLeads": []
+    },
+    "heb-2": {
+      "id": "heb-2",
+      "label": "Thu 23 Oct 14:30",
+      "time": "14:30",
+      "date": "2026-10-23",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "hebbal",
+      "hubName": "Hebbal",
+      "bookedLeads": []
+    },
+    "heb-3": {
+      "id": "heb-3",
+      "label": "Fri 24 Oct 11:30",
+      "time": "11:30",
+      "date": "2026-10-24",
+      "capacity": 3,
+      "booked": 0,
+      "hubId": "hebbal",
+      "hubName": "Hebbal",
+      "bookedLeads": []
+    }
+  }
+}

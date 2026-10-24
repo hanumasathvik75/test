@@ -1,0 +1,33 @@
+{
+  "name": "milo-whatsapp-system",
+  "version": "1.0.0",
+  "description": "Milo WhatsApp Agent Flow and Advanced Fleet OS with Maya Call Taxi Integration",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node tests/parseChoice.test.js && node tests/checklist.test.js",
+    "test:parser": "node tests/parseChoice.test.js",
+    "test:checklist": "node tests/checklist.test.js",
+    "build": "cd client && npm run build",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "whatsapp",
+    "agent",
+    "flow",
+    "taxi",
+    "fleet",
+    "milo"
+  ],
+  "author": "Arnuv / DeepMind",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "multer": "^2.5.0",
+    "uuid": "^14.0.3",
+    "ws": "^8.22.0"
+  }
+}
