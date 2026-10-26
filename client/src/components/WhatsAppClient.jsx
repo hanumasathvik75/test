@@ -67,17 +67,25 @@ export default function WhatsAppClient({ activePhone }) {
     }
   };
 
-  // Extract numbered option buttons from bot messages
+  // Extract numbered option buttons from bot messages (splits multi-options on same line)
   const extractQuickButtons = (text) => {
     if (!text) return [];
-    const lines = text.split('\n');
     const buttons = [];
-    const optionRegex = /^([0-9])\s*(=|→|-|:)\s*(.+)$/i;
-    for (const line of lines) {
-      const trimmed = line.trim();
+    // Split by newlines, bullets (·, •), pipes (|), and utf8 variants
+    const segments = text.split(/[\n\r·•|]+|[Â\u00c2][\u00b7\u2022]/g);
+    const optionRegex = /(?:Reply\s+)?([0-9]+)\s*(=|→|-|:)\s*(.+)/i;
+
+    for (const seg of segments) {
+      const trimmed = seg.trim();
+      if (!trimmed) continue;
       const match = trimmed.match(optionRegex);
       if (match) {
-        buttons.push({ id: match[1], label: `${match[1]} → ${match[3].trim()}` });
+        const id = match[1];
+        const desc = match[3].trim();
+        const label = `${id} = ${desc}`;
+        if (!buttons.some(b => b.id === id && b.label === label)) {
+          buttons.push({ id, label });
+        }
       }
     }
     return buttons;
@@ -252,12 +260,12 @@ export default function WhatsAppClient({ activePhone }) {
 
               {/* Quick Reply Buttons */}
               {buttons.length > 0 && !isUser && (
-                <div className="flex flex-wrap gap-1.5 mt-1.5 max-w-[75%] md:max-w-[60%]">
-                  {buttons.map(btn => (
+                <div className="flex flex-wrap gap-1.5 mt-1.5 max-w-[85%] md:max-w-[70%]">
+                  {buttons.map((btn, bIdx) => (
                     <button
-                      key={btn.id}
+                      key={`${btn.id}-${bIdx}`}
                       onClick={() => handleSend(btn.id)}
-                      className="px-3 py-1.5 rounded-full bg-[#202c33] hover:bg-[#00a884] hover:text-black text-[#00a884] border border-[#00a884]/50 text-xs font-semibold transition-all shadow-sm"
+                      className="px-3 py-1.5 rounded-full bg-[#202c33] hover:bg-[#00a884] hover:text-black text-[#00a884] border border-[#00a884]/50 text-xs font-semibold transition-all shadow-sm active:scale-95 cursor-pointer"
                     >
                       {btn.label}
                     </button>
