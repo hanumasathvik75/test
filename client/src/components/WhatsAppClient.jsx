@@ -104,26 +104,91 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
     }
   };
 
+  // Formatted WhatsApp message renderer (converts **bold**, *bold*, and `code` into clean elements without raw asterisks)
+  const FormattedMessage = ({ text }) => {
+    if (!text) return null;
+
+    const parseLine = (line, lIdx) => {
+      const tokens = [];
+      let remaining = line;
+      const regex = /(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*\s][^*]*?\*|`[^`]+`)/;
+      let keyIdx = 0;
+
+      while (remaining) {
+        const match = remaining.match(regex);
+        if (!match) {
+          tokens.push(<span key={keyIdx++}>{remaining}</span>);
+          break;
+        }
+
+        const matchIndex = match.index;
+        if (matchIndex > 0) {
+          tokens.push(<span key={keyIdx++}>{remaining.slice(0, matchIndex)}</span>);
+        }
+
+        const raw = match[0];
+        if (raw.startsWith('***') && raw.endsWith('***') && raw.length > 6) {
+          tokens.push(<strong key={keyIdx++} className="font-bold text-white">{raw.slice(3, -3)}</strong>);
+        } else if (raw.startsWith('**') && raw.endsWith('**') && raw.length > 4) {
+          tokens.push(<strong key={keyIdx++} className="font-bold text-white">{raw.slice(2, -2)}</strong>);
+        } else if (raw.startsWith('*') && raw.endsWith('*') && raw.length > 2) {
+          tokens.push(<strong key={keyIdx++} className="font-bold text-white">{raw.slice(1, -1)}</strong>);
+        } else if (raw.startsWith('`') && raw.endsWith('`') && raw.length > 2) {
+          tokens.push(<code key={keyIdx++} className="bg-black/40 px-1 py-0.5 rounded text-xs font-mono text-[#ffd279]">{raw.slice(1, -1)}</code>);
+        } else {
+          tokens.push(<span key={keyIdx++}>{raw}</span>);
+        }
+
+        remaining = remaining.slice(matchIndex + raw.length);
+      }
+
+      return <div key={lIdx}>{tokens.length > 0 ? tokens : <span>&nbsp;</span>}</div>;
+    };
+
+    const lines = text.split('\n');
+    return <div className="leading-relaxed">{lines.map((l, idx) => parseLine(l, idx))}</div>;
+  };
+
   // Extract numbered option buttons from bot messages (splits multi-options on same line)
   const extractQuickButtons = (text) => {
     if (!text) return [];
     const buttons = [];
     const segments = text.split(/[\n\r·•|]+|[Â\u00c2][\u00b7\u2022]/g);
-    const optionRegex = /(?:Reply\s+)?([0-9]+)\s*(=|→|-|:)\s*(.+)/i;
+    
+    // Strict option pattern: Must start with number 0-9 followed by =, ., -, ), or ->
+    // Colon : is only allowed if NOT followed by two digits (to avoid time like 8:00)
+    const optionRegex = /^(?:(?:Reply\s+)?([0-9])\s*(=|→|\.|\)|-|:(?!\d{2}))\s*(.+)|(?:Reply\s+([0-9])(?:\s+for|\s+to|\b)\s*(.+)?))$/i;
 
     for (const seg of segments) {
-      const trimmed = seg.trim();
+      const trimmed = seg.trim().replace(/^\*+|\*+$/g, '');
       if (!trimmed) continue;
+      // Skip clock times e.g. 8:00 AM
+      if (/^\d{1,2}:\d{2}/i.test(trimmed)) continue;
+
       const match = trimmed.match(optionRegex);
       if (match) {
-        const id = match[1];
-        const desc = match[3].trim();
+        const id = match[1] || match[4];
+        let desc = (match[3] || match[5] || '').trim().replace(/^\*+|\*+$/g, '');
+        if (!desc) {
+          if (id === '0') desc = 'Main Menu';
+          else if (id === '9') desc = 'Talk to Team';
+          else continue;
+        }
+        // If description is longer than 40 chars, it's a paragraph sentence, not a menu button
+        if (desc.length > 40) continue;
+
         const label = `${id} = ${desc}`;
-        if (!buttons.some(b => b.id === id && b.label === label)) {
+        if (!buttons.some(b => b.id === id)) {
           buttons.push({ id, label });
         }
       }
     }
+
+    // If message mentions "reply 0 for Main Menu" and 0 isn't already there, add it
+    if (/\breply\s+0\b/i.test(text) && !buttons.some(b => b.id === '0')) {
+      buttons.push({ id: '0', label: '0 = Main Menu' });
+    }
+
     return buttons;
   };
 
@@ -327,7 +392,7 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
                     </div>
                   </div>
                 ) : (
-                  <div className="whitespace-pre-wrap leading-relaxed">{msg.text}</div>
+                  <FormattedMessage text={msg.text} />
                 )}
 
                 {/* Media & location previews */}

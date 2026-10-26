@@ -72,6 +72,7 @@ function buildSystemPrompt(lang = 'en', currentStepId = 'M1') {
 - The customer or driver has a question or doubt while interacting on WhatsApp.
 - Current conversation step: ${currentStepId}.
 - Respond warmly, clearly, and concisely in WhatsApp format (2 to 4 sentences or brief bullet points).
+- Format rule: Do NOT use markdown double asterisks **bold**. For emphasis on WhatsApp, use plain text or single asterisks *bold*. Never output double asterisks.
 - If the user asks in Hindi, reply in natural Hindi (Devanagari or Romanized). If Kannada, reply in Kannada. Otherwise English.
 - Always be helpful and address their exact doubt directly.
 - At the end of your answer, provide a short 1-line guidance on how they can continue the flow (e.g. "To continue with your application, reply with your choice, or reply 0 for the Main Menu.").`;
