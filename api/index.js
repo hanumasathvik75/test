@@ -5,6 +5,7 @@
  * The frontend will fall back to polling for real-time updates.
  */
 
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const routes = require('../server/api/routes');

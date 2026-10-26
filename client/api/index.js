@@ -1,21 +1,22 @@
 /**
- * client/api/index.js
- * Vercel Serverless Function — wraps the Milo Express backend.
- * Runs when Vercel root directory is set to "client".
+ * api/index.js - Vercel Serverless Function Entry Point
+ * Wraps the Express app for Vercel's serverless environment.
+ * Note: WebSocket connections are not supported in serverless mode.
+ * The frontend will fall back to polling for real-time updates.
  */
+
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
-
-// Server code lives at client/server/ (copied from repo root /server/)
 const routes = require('../server/api/routes');
 
 const app = express();
+
 app.use(cors({ origin: '*' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// No WebSocket in serverless — no-op broadcaster
+// No-op broadcaster in serverless (no persistent WS connections)
 routes.setBroadcaster(() => {});
 
 app.use('/api', routes);

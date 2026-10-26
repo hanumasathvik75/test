@@ -14,6 +14,7 @@ const { processInbound, formatStepMessage, getTranslation } = require('../flowRu
 const scheduler = require('../reminders/scheduler');
 const { encryptBuffer, maskAadhaar, isAllowedDocType } = require('../security/encryption');
 const miloConfig = require('../config/miloConfig');
+const grokEngine = require('../ai/grokEngine');
 const db = require('../storage/db');
 
 // Set up encrypted file uploads
@@ -381,6 +382,22 @@ router.post('/ingestion/upload', upload.single('file'), (req, res) => {
 // -------------------------------------------------------------
 // 5. CONFIGURATION & FACTS SHEET API
 // -------------------------------------------------------------
+
+router.get('/grok/status', (req, res) => {
+  res.json({
+    configured: grokEngine.isConfigured(),
+    model: grokEngine.GROK_MODEL
+  });
+});
+
+router.post('/grok/key', (req, res) => {
+  const { key } = req.body;
+  if (key && typeof key === 'string') {
+    grokEngine.setApiKey(key);
+    return res.json({ success: true, configured: grokEngine.isConfigured(), model: grokEngine.GROK_MODEL });
+  }
+  return res.status(400).json({ error: 'Valid API key is required' });
+});
 
 router.get('/config', (req, res) => {
   res.json({

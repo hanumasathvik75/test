@@ -11,6 +11,7 @@ const miloFlow = require('./flows/milo');
 const miloConfig = require('./config/miloConfig');
 const { parseChoice } = require('./parser/parseChoice');
 const { answerFromFacts } = require('./ai/factsEngine');
+const grokEngine = require('./ai/grokEngine');
 const { maskAadhaar, encryptBuffer } = require('./security/encryption');
 const db = require('./storage/db');
 
@@ -244,25 +245,56 @@ async function processInbound(payload) {
   // If user asked a compound question e.g. "2 but what is the deposit?"
   let extraAnswer = null;
   if (parsed.isChoice && parsed.extraQuestion) {
-    const factsResult = answerFromFacts(parsed.extraQuestion, lang);
-    extraAnswer = factsResult.reply;
-    if (factsResult.escalate) {
-      db.createEscalation({
-        phone,
-        step: currentStepId,
-        topic: 'Unanswered Question',
-        reason: 'Question not found in facts sheet',
-        question: parsed.extraQuestion,
-        leadSummary: flowState.answers
+    if (grokEngine.isConfigured()) {
+      const grokRes = await grokEngine.generateGrokResponse({
+        userMessage: parsed.extraQuestion,
+        currentStepId,
+        lead,
+        lang,
+        recentMessages: db.getMessages(phone)
       });
+      if (grokRes) {
+        extraAnswer = grokRes;
+      }
+    }
+    if (!extraAnswer) {
+      const factsResult = answerFromFacts(parsed.extraQuestion, lang);
+      extraAnswer = factsResult.reply;
+      if (factsResult.escalate) {
+        db.createEscalation({
+          phone,
+          step: currentStepId,
+          topic: 'Unanswered Question',
+          reason: 'Question not found in facts sheet',
+          question: parsed.extraQuestion,
+          leadSummary: flowState.answers
+        });
+      }
     }
   }
 
-  // 10. Handle Wrong Reply / Non-choice
+  // 10. Handle Wrong Reply / Non-choice (Doubts, Free text questions, Conversational AI)
   if (!parsed.isChoice) {
+    // HYBRID ARCHITECTURE: If user types free text or has doubts, Grok LLM understands & answers!
+    if (grokEngine.isConfigured()) {
+      const grokReply = await grokEngine.generateGrokResponse({
+        userMessage: rawText,
+        currentStepId,
+        lead,
+        lang,
+        recentMessages: db.getMessages(phone)
+      });
+
+      if (grokReply) {
+        db.logMessage(phone, { sender: 'bot', text: grokReply, isGrok: true });
+        return { reply: grokReply, step: currentStepId, isGrok: true };
+      }
+    }
+
+    // Fallback if Grok key not configured or returned null:
     // Check Rule 4: Is this a free-text question? (e.g. "what is the deposit?")
     const isQuestion = rawText.includes('?') ||
-      /^(what|how|why|when|is|can|kya|kitna|yenu|bhav|deposit|rent|charg|shift)/i.test(rawText);
+      /^(what|how|why|when|is|can|kya|kitna|yenu|bhav|deposit|rent|charg|shift|doubt|help|tell)/i.test(rawText);
 
     if (isQuestion) {
       const factsResult = answerFromFacts(rawText, lang);
