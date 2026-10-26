@@ -222,6 +222,15 @@ async function processInbound(payload) {
     stepDef = miloFlow.M1;
   }
 
+  // Friendly greeting check (hi, hello, etc.) on initial menu steps: show clean rule-based step directly!
+  const isGreeting = /^(hi|hello|hey|namaste|vanakkam|start|milo|hola)\b/i.test(cleanLower);
+  if (isGreeting && (currentStepId === 'L1' || currentStepId === 'M1') && (!flowState.answers || Object.keys(flowState.answers).length === 0)) {
+    flowState.wrongReplyCount = 0;
+    const reply = formatStepMessage(currentStepId, lead);
+    db.logMessage(phone, { sender: 'bot', text: reply });
+    return { reply, step: currentStepId };
+  }
+
   // 8. Handle Free Text / Location / Document step types directly
   if (stepDef.type === 'text') {
     return handleTextStep(lead, stepDef, rawText);
@@ -273,10 +282,15 @@ async function processInbound(payload) {
     }
   }
 
-  // 10. Handle Wrong Reply / Non-choice (Doubts, Free text questions, Conversational AI)
+  // 10. Handle Non-choice (Rule-based first; Groq LLM ONLY when user is confused or repeatedly stuck)
   if (!parsed.isChoice) {
-    // HYBRID ARCHITECTURE: If user types free text or has doubts, Groq LLM understands & answers!
-    if (groqEngine.isConfigured()) {
+    // Check if user is explicitly confused, stuck, or asking for clarification
+    const isConfused =
+      /(confus|don'?t understand|samajh|arthavagilla|what do you mean|don'?t get|what does this mean|not sure|explain|too complicated|don'?t know|pata nahi|gothilla|clarif|stuck|help me understand|doubt|what if)/i.test(cleanLower) ||
+      flowState.wrongReplyCount >= 2;
+
+    // ONLY activate Groq LLM if the user is too confused to answer the question!
+    if (isConfused && groqEngine.isConfigured()) {
       const groqReply = await groqEngine.generateGroqResponse({
         userMessage: rawText,
         currentStepId,
@@ -291,31 +305,34 @@ async function processInbound(payload) {
       }
     }
 
-    // Fallback if Groq key not configured or returned null:
-    // Check Rule 4: Is this a free-text question? (e.g. "what is the deposit?")
-    const isQuestion = rawText.includes('?') ||
-      /^(what|how|why|when|is|can|kya|kitna|yenu|bhav|deposit|rent|charg|shift|doubt|help|tell)/i.test(rawText);
+    // Standard Rule-based Facts Sheet check: Is this a known policy/facts question?
+    const isFactsQuestion = rawText.includes('?') ||
+      /^(what|how|why|when|is|can|kya|kitna|yenu|bhav|deposit|rent|charg|shift)/i.test(rawText);
 
-    if (isQuestion) {
+    if (isFactsQuestion) {
       const factsResult = answerFromFacts(rawText, lang);
-      if (factsResult.escalate) {
-        db.createEscalation({
-          phone,
-          step: currentStepId,
-          topic: 'Unanswered Question',
-          reason: 'Question not found in facts sheet',
-          question: rawText,
-          leadSummary: flowState.answers
+      if (factsResult.answered) {
+        const stepQuestion = formatStepMessage(currentStepId, lead);
+        const combined = `${factsResult.reply}\n\n${stepQuestion}`;
+        db.logMessage(phone, { sender: 'bot', text: combined });
+        return { reply: combined, step: currentStepId };
+      } else if (groqEngine.isConfigured()) {
+        // If question wasn't in hardcoded facts sheet, let Groq assist:
+        const groqReply = await groqEngine.generateGroqResponse({
+          userMessage: rawText,
+          currentStepId,
+          lead,
+          lang,
+          recentMessages: db.getMessages(phone)
         });
+        if (groqReply) {
+          db.logMessage(phone, { sender: 'bot', text: groqReply, isGroq: true });
+          return { reply: groqReply, step: currentStepId, isGroq: true };
+        }
       }
-      // Answer the question, then repeat the current step's question
-      const stepQuestion = formatStepMessage(currentStepId, lead);
-      const combined = `${factsResult.reply}\n\n${stepQuestion}`;
-      db.logMessage(phone, { sender: 'bot', text: combined });
-      return { reply: combined, step: currentStepId };
     }
 
-    // Wrong reply rule (Rule 3)
+    // Standard Rule-based 2-Strike Error Loop (Rule 3)
     flowState.wrongReplyCount = (flowState.wrongReplyCount || 0) + 1;
     db.updateLead(phone, { extra: lead.extra });
 
