@@ -54,10 +54,283 @@
       "docs": {},
       "testDrive": null,
       "createdAt": "2026-10-26T13:04:25.866Z"
+    },
+    "+919811223344": {
+      "phone": "+919811223344",
+      "language": null,
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "L1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:12:22.029Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:12:22.029Z"
+    },
+    "+919899001122": {
+      "phone": "+919899001122",
+      "language": null,
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "L1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:13:40.724Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:13:40.724Z"
+    },
+    "+919858112600": {
+      "phone": "+919858112600",
+      "language": null,
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "L1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:16:22.428Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:16:22.428Z"
+    },
+    "+919855555555": {
+      "phone": "+919855555555",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:20:29.430Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:20:10.560Z"
+    },
+    "+919866778899": {
+      "phone": "+919866778899",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": null,
+          "step": "M1",
+          "answers": {},
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:21:53.491Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:21:43.705Z"
+    },
+    "+919815128634": {
+      "phone": "+919815128634",
+      "language": "en",
+      "stage": "waitlist",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "rider",
+          "step": "B9",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "None"
+            ],
+            "age_band": "under_21",
+            "area": "bus stand",
+            "ride_type": "Airport pickup",
+            "when": "Now, within 1 hour",
+            "isNow": true,
+            "pickup": "mars",
+            "drop": "i will go to venus and saturn",
+            "passengers": "3 or 4",
+            "name": "sun"
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:30:12.275Z",
+          "lastBookingId": "MLO-5164"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:27:16.668Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "None"
+      ],
+      "age_band": "under_21",
+      "area": "bus stand",
+      "name": "sun"
+    },
+    "+919877112233": {
+      "phone": "+919877112233",
+      "language": "en",
+      "stage": "new",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "rider",
+          "step": "B9",
+          "answers": {
+            "ride_type": "Airport drop",
+            "when": "Now, within 1 hour",
+            "isNow": true,
+            "pickup": "Indiranagar 100ft Rd",
+            "drop": "Bengaluru Kempegowda International Airport (BLR)",
+            "passengers": "1 or 2",
+            "name": "Sathvik"
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:36:27.463Z",
+          "lastBookingId": "MLO-3253"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:36:26.286Z",
+      "name": "Sathvik"
     }
   },
-  "bookings": {},
-  "escalations": [],
+  "bookings": {
+    "MLO-5164": {
+      "id": "MLO-5164",
+      "status": "requested",
+      "createdAt": "2026-10-26T13:30:12.270Z",
+      "phone": "+919815128634",
+      "riderName": "sun",
+      "rideType": "Airport pickup",
+      "when": "Now, within 1 hour",
+      "date": "Today",
+      "time": "Immediate",
+      "pickup": "mars",
+      "drop": "i will go to venus and saturn",
+      "passengers": "3 or 4",
+      "needs2Cars": false
+    },
+    "MLO-3253": {
+      "id": "MLO-3253",
+      "status": "requested",
+      "createdAt": "2026-10-26T13:36:27.459Z",
+      "phone": "+919877112233",
+      "riderName": "Sathvik",
+      "rideType": "Airport drop",
+      "when": "Now, within 1 hour",
+      "date": "Today",
+      "time": "Immediate",
+      "pickup": "Indiranagar 100ft Rd",
+      "drop": "Bengaluru Kempegowda International Airport (BLR)",
+      "passengers": "1 or 2",
+      "needs2Cars": false
+    }
+  },
+  "escalations": [
+    {
+      "id": "ESC-mvpavl6p",
+      "phone": "+919877112233",
+      "step": "B2",
+      "topic": "URGENT: Now Ride Booking",
+      "reason": "Rider requested ride NOW (within 1 hour)",
+      "question": "Immediate ride request from +919877112233",
+      "leadSummary": {
+        "ride_type": "Airport drop",
+        "when": "Now, within 1 hour",
+        "isNow": true,
+        "pickup": "Indiranagar 100ft Rd",
+        "drop": "Bengaluru Kempegowda International Airport (BLR)",
+        "passengers": "1 or 2",
+        "name": "Sathvik"
+      },
+      "status": "open",
+      "createdAt": "2026-10-26T13:36:26.881Z",
+      "notes": ""
+    },
+    {
+      "id": "ESC-mvpaml28",
+      "phone": "+919815128634",
+      "step": "B2",
+      "topic": "URGENT: Now Ride Booking",
+      "reason": "Rider requested ride NOW (within 1 hour)",
+      "question": "Immediate ride request from +919815128634",
+      "leadSummary": {
+        "badge": "yes",
+        "experience_band": "1_to_3_yrs",
+        "platforms": [
+          "None"
+        ],
+        "age_band": "under_21",
+        "area": "bus stand",
+        "ride_type": "Airport pickup",
+        "when": "Now, within 1 hour",
+        "isNow": true,
+        "pickup": "mars",
+        "drop": "i will go to venus and saturn",
+        "passengers": "3 or 4",
+        "name": "sun"
+      },
+      "status": "open",
+      "createdAt": "2026-10-26T13:29:26.816Z",
+      "notes": ""
+    },
+    {
+      "id": "ESC-mvpalcgz",
+      "phone": "+919815128634",
+      "step": "X2_DONE",
+      "topic": "Team Handoff",
+      "reason": "User requested agent via option 9",
+      "question": "9",
+      "leadSummary": {
+        "badge": "yes",
+        "experience_band": "1_to_3_yrs",
+        "platforms": [
+          "None"
+        ],
+        "age_band": "under_21",
+        "area": "bus stand",
+        "ride_type": "Airport pickup",
+        "when": "Now, within 1 hour",
+        "isNow": true,
+        "pickup": "mars",
+        "drop": "i will go to venus and saturn",
+        "passengers": "3 or 4",
+        "name": "sun"
+      },
+      "status": "open",
+      "createdAt": "2026-10-26T13:28:29.027Z",
+      "notes": ""
+    }
+  ],
   "messages": {
     "+919876543210": [
       {
@@ -269,6 +542,758 @@
         "status": "delivered",
         "sender": "bot",
         "text": "Please reply with just the number, like 2.\n\nThanks, Driver. Milo needs drivers with a badge licence and at least 1 year driving, age 21–50. Can we message you if this changes?\n1 = Yes · 2 = No\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919811223344": [
+      {
+        "id": "MSG-mvpa0mbz-mlx",
+        "timestamp": "2026-10-26T13:12:22.031Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "is charging really free and what is the weekly rent?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpa0n1x-ngj",
+        "timestamp": "2026-10-26T13:12:22.965Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Rent is ₹6,300 a week. There is no platform commission on your trips.\n\nWelcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      }
+    ],
+    "+919899001122": [
+      {
+        "id": "MSG-mvpa2b1z-xh8",
+        "timestamp": "2026-10-26T13:13:40.727Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "I have a doubt. Is the security deposit refunded immediately if I leave after 3 months?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpa2c0m-biw",
+        "timestamp": "2026-10-26T13:13:41.974Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "The ₹10,000 security deposit is fully refundable, but it’s returned only after you hand the vehicle back and we complete the standard inspection. The refund is processed shortly after the hand‑over (usually within a few business days), not instantly at the moment you decide to leave.  \n\nTo continue, reply with your next question or reply 0 for the Main Menu.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpa2jni-q9u",
+        "timestamp": "2026-10-26T13:13:51.870Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Milo hub par charging ka kya charges hai?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpa2kcp-yp5",
+        "timestamp": "2026-10-26T13:13:52.777Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Milo के आधिकारिक हब (HSR Layout, Electronic City, Hebbal) पर चार्जिंग **पूरी तरह से मुफ्त** और अनलिमिटेड है। यदि आप बाहरी पार्टनर फास्ट‑चार्जर इस्तेमाल करते हैं तो ₹12 प्रति kWh चार्ज लगता है।  \n\nआगे बढ़ने के लिए अपना अगला सवाल लिखें या 0 दबाकर Main Menu पर जाएँ।",
+        "isGroq": true
+      }
+    ],
+    "+919858112600": [
+      {
+        "id": "MSG-mvpa5ub0-u3g",
+        "timestamp": "2026-10-26T13:16:25.644Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpa5uyx-hei",
+        "timestamp": "2026-10-26T13:16:26.505Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Hi! 👋 How can I help you today – vehicle rental, drive‑to‑own details, charging info, or driver onboarding?  \n\nTo continue, just let me know your query or reply 0 for the Main Menu.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpa6ela-894",
+        "timestamp": "2026-10-26T13:16:51.934Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "how can u help me",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpa6foz-g6x",
+        "timestamp": "2026-10-26T13:16:53.363Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "I can assist you with:\n\n- **Renting a Tata Tigor EV** (weekly ₹6,300, ₹10,000 refundable deposit)  \n- **Drive‑to‑Own** program – become the owner after 36 months of rent for just ₹1  \n- **Free unlimited charging** at Milo hubs (HSR Layout, Electronic City, Hebbal)  \n- **Driver onboarding** – eligibility, required documents, and application steps  \n- **Booking rides** through Maya Call Taxi (airport, outstation, hourly, corporate)\n\nLet me know which of these you’d like to explore, or reply 0 for the Main Menu.",
+        "isGroq": true
+      }
+    ],
+    "+919855555555": [
+      {
+        "id": "MSG-mvpaanup-9hk",
+        "timestamp": "2026-10-26T13:20:10.561Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpaanuq-ah6",
+        "timestamp": "2026-10-26T13:20:10.562Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpaavb5-ebh",
+        "timestamp": "2026-10-26T13:20:20.225Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpaavb8-dnv",
+        "timestamp": "2026-10-26T13:20:20.228Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpab2et-16k",
+        "timestamp": "2026-10-26T13:20:29.429Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpab2ev-gph",
+        "timestamp": "2026-10-26T13:20:29.431Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpabd9c-tpc",
+        "timestamp": "2026-10-26T13:20:43.488Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "I am confused, what is a commercial badge driving licence?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpabd9f-2nj",
+        "timestamp": "2026-10-26T13:20:43.491Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "You will need: commercial badge driving licence, Aadhaar card, PAN card, and a bank passbook or cancelled cheque.\n\nDo you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919866778899": [
+      {
+        "id": "MSG-mvpacnq2-1do",
+        "timestamp": "2026-10-26T13:21:43.706Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpacnq4-vm8",
+        "timestamp": "2026-10-26T13:21:43.708Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpacv9t-79t",
+        "timestamp": "2026-10-26T13:21:53.489Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpacv9w-ahv",
+        "timestamp": "2026-10-26T13:21:53.492Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpad5f1-g73",
+        "timestamp": "2026-10-26T13:22:06.637Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "I don't understand, what is the difference between driving with Milo and booking a ride?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpad6bf-42x",
+        "timestamp": "2026-10-26T13:22:07.803Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "**Driving with Milo** – You become a partner driver, rent a Tata Tigor EV for ₹6,300 / week, keep 100 % of the fares, and after 36 months you can own the vehicle for just ₹1.  \n\n**Booking a ride** – You’re a passenger who can request a Milo taxi (airport, local, outstation, etc.) through Maya Call Taxi and get a driver‑assigned EV at a quoted fare.\n\n*Choose the option that matches your need to continue.*  \nReply **1** to become a driver, **2** to book a ride, or **0** for the Main Menu.",
+        "isGroq": true
+      }
+    ],
+    "+919815128634": [
+      {
+        "id": "MSG-mvpajtxf-pj4",
+        "timestamp": "2026-10-26T13:27:18.339Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpajtxi-kp9",
+        "timestamp": "2026-10-26T13:27:18.342Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpajxgu-sal",
+        "timestamp": "2026-10-26T13:27:22.926Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpajxh2-oqs",
+        "timestamp": "2026-10-26T13:27:22.934Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpak4b4-c1d",
+        "timestamp": "2026-10-26T13:27:31.792Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpak4bf-w14",
+        "timestamp": "2026-10-26T13:27:31.803Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpak7c2-fii",
+        "timestamp": "2026-10-26T13:27:35.714Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpak7c8-xxs",
+        "timestamp": "2026-10-26T13:27:35.720Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpakbpf-gik",
+        "timestamp": "2026-10-26T13:27:41.379Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpakbpt-3yw",
+        "timestamp": "2026-10-26T13:27:41.393Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpakex5-liv",
+        "timestamp": "2026-10-26T13:27:45.545Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "5",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpakexd-dg3",
+        "timestamp": "2026-10-26T13:27:45.553Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpakhru-lpb",
+        "timestamp": "2026-10-26T13:27:49.242Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpakhs2-y89",
+        "timestamp": "2026-10-26T13:27:49.250Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which hub is closest to you?\n1 = HSR Layout · 2 = Electronic City · 3 = Hebbal · 4 = None of these is near me\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpakky8-bmj",
+        "timestamp": "2026-10-26T13:27:53.360Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "4",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpakkyi-zbm",
+        "timestamp": "2026-10-26T13:27:53.370Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which area do you live in? (Please type your area or neighbourhood)"
+      },
+      {
+        "id": "MSG-mvpaku4y-z2h",
+        "timestamp": "2026-10-26T13:28:05.266Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "bus stand",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpaku54-zr9",
+        "timestamp": "2026-10-26T13:28:05.272Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thanks, we'll message you when Milo opens near you."
+      },
+      {
+        "id": "MSG-mvpal0kz-4wb",
+        "timestamp": "2026-10-26T13:28:13.619Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "ok",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpal5pv-22f",
+        "timestamp": "2026-10-26T13:28:20.275Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "3",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpala4e-jb9",
+        "timestamp": "2026-10-26T13:28:25.982Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpalcg8-zpt",
+        "timestamp": "2026-10-26T13:28:29.000Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "9",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpalcmp-6tz",
+        "timestamp": "2026-10-26T13:28:29.233Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "I've passed this to Milo's team. Someone will reply here between 9 am and 8 pm."
+      },
+      {
+        "id": "MSG-mvpalhcn-5e9",
+        "timestamp": "2026-10-26T13:28:35.351Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "0",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpalhcr-22l",
+        "timestamp": "2026-10-26T13:28:35.355Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpalr91-xs3",
+        "timestamp": "2026-10-26T13:28:48.181Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "i have some doubt",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpalryp-tx8",
+        "timestamp": "2026-10-26T13:28:49.105Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Sure, I’m here to help! Please let me know which area you have a question about:\n\n1️⃣ I want to drive with Milo  \n2️⃣ Book a ride  \n3️⃣ I already drive with Milo  \n\nOr reply 0 to go back to the Main Menu.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpam4hd-qtz",
+        "timestamp": "2026-10-26T13:29:05.329Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "ok i want to book a ride",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpam4hp-9h3",
+        "timestamp": "2026-10-26T13:29:05.342Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What kind of ride?\n1 = Airport drop · 2 = Airport pickup · 3 = Local, by the hour · 4 = Outstation · 5 = Office account\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpamef2-gvq",
+        "timestamp": "2026-10-26T13:29:18.206Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "let me think",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpamef8-j0m",
+        "timestamp": "2026-10-26T13:29:18.212Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nWhat kind of ride?\n1 = Airport drop · 2 = Airport pickup · 3 = Local, by the hour · 4 = Outstation · 5 = Office account\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpamj6i-1de",
+        "timestamp": "2026-10-26T13:29:24.378Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpamj6q-26p",
+        "timestamp": "2026-10-26T13:29:24.386Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "When?\n1 = Now, within 1 hour · 2 = Later today · 3 = Tomorrow · 4 = Another date\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpaml24-d47",
+        "timestamp": "2026-10-26T13:29:26.812Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpaml2f-imr",
+        "timestamp": "2026-10-26T13:29:26.823Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send your pickup location (📎 → Location) or type the address. For airport pickup: type your flight number."
+      },
+      {
+        "id": "MSG-mvpampu6-79o",
+        "timestamp": "2026-10-26T13:29:33.006Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "mars",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpampua-0vy",
+        "timestamp": "2026-10-26T13:29:33.010Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Where to? Send a location or type the address."
+      },
+      {
+        "id": "MSG-mvpan1o1-3um",
+        "timestamp": "2026-10-26T13:29:48.337Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "i will go to venus and saturn",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpan1o5-q2s",
+        "timestamp": "2026-10-26T13:29:48.341Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How many people?\n1 = 1 or 2 · 2 = 3 or 4 · 3 = More than 4\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpan5xe-epz",
+        "timestamp": "2026-10-26T13:29:53.858Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "`",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpan5xl-b4l",
+        "timestamp": "2026-10-26T13:29:53.865Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nHow many people?\n1 = 1 or 2 · 2 = 3 or 4 · 3 = More than 4\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpanasa-w7r",
+        "timestamp": "2026-10-26T13:30:00.154Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpanasf-h8q",
+        "timestamp": "2026-10-26T13:30:00.159Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your name?"
+      },
+      {
+        "id": "MSG-mvpane00-u3p",
+        "timestamp": "2026-10-26T13:30:04.320Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "sun",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpane07-mnx",
+        "timestamp": "2026-10-26T13:30:04.327Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Airport pickup, Now, within 1 hour  , from mars, 3 or 4 people.\n1 = Send request · 2 = Change something\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpank4q-dqt",
+        "timestamp": "2026-10-26T13:30:12.266Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpank52-9df",
+        "timestamp": "2026-10-26T13:30:12.278Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Request sent! Milo's team will confirm the car and fare here shortly."
+      },
+      {
+        "id": "MSG-mvpanqs0-7yh",
+        "timestamp": "2026-10-26T13:30:20.880Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "can u tell now",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpantg0-0f2",
+        "timestamp": "2026-10-26T13:30:24.336Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "We’ve forwarded your airport‑pickup request and are checking vehicle availability for 3‑4 passengers. You’ll receive a confirmation with the exact fare and car details within the next few minutes. \n\nIf you’d like to share the exact pickup address or any special instructions, just reply with them now. \n\nTo continue, reply with your pickup location or press 0 for the Main Menu.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpao1et-3ag",
+        "timestamp": "2026-10-26T13:30:34.661Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "what is milo cabs",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpao3fj-iv9",
+        "timestamp": "2026-10-26T13:30:37.279Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Milo Cabs is our on‑demand electric‑taxi service in Bengaluru, powered by the Tata Tigor EV and driven by verified professional drivers (4.9★ rating). You can book airport drops/pick‑ups, local hourly rentals, outstation trips, or corporate rides, all with real‑time dispatch, OTP verification and live vehicle tracking.  \n\nTo learn more or start a booking, reply with the service you need (e.g., “airport pickup”) or press 0 for the Main Menu.",
+        "isGroq": true
+      }
+    ],
+    "+919877112233": [
+      {
+        "id": "MSG-mvpavkqc-c01",
+        "timestamp": "2026-10-26T13:36:26.292Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavkqg-qur",
+        "timestamp": "2026-10-26T13:36:26.296Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpavkw6-7ih",
+        "timestamp": "2026-10-26T13:36:26.502Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavkwh-gpa",
+        "timestamp": "2026-10-26T13:36:26.513Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpavkzg-yfr",
+        "timestamp": "2026-10-26T13:36:26.620Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavkzo-318",
+        "timestamp": "2026-10-26T13:36:26.628Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What kind of ride?\n1 = Airport drop · 2 = Airport pickup · 3 = Local, by the hour · 4 = Outstation · 5 = Office account\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpavl34-90n",
+        "timestamp": "2026-10-26T13:36:26.752Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavl3c-klj",
+        "timestamp": "2026-10-26T13:36:26.760Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "When?\n1 = Now, within 1 hour · 2 = Later today · 3 = Tomorrow · 4 = Another date\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpavl6l-yq7",
+        "timestamp": "2026-10-26T13:36:26.877Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavl6u-uwn",
+        "timestamp": "2026-10-26T13:36:26.886Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Send your pickup location (📎 → Location) or type the address. For airport pickup: type your flight number."
+      },
+      {
+        "id": "MSG-mvpavlau-5vv",
+        "timestamp": "2026-10-26T13:36:27.030Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Indiranagar 100ft Rd",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavlb1-z7q",
+        "timestamp": "2026-10-26T13:36:27.037Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How many people?\n1 = 1 or 2 · 2 = 3 or 4 · 3 = More than 4\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpavlcr-gnk",
+        "timestamp": "2026-10-26T13:36:27.099Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Kempegowda Airport T1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavlcy-5kt",
+        "timestamp": "2026-10-26T13:36:27.106Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nHow many people?\n1 = 1 or 2 · 2 = 3 or 4 · 3 = More than 4\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpavlhc-lwl",
+        "timestamp": "2026-10-26T13:36:27.264Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavlhi-b44",
+        "timestamp": "2026-10-26T13:36:27.270Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your name?"
+      },
+      {
+        "id": "MSG-mvpavlkc-a3b",
+        "timestamp": "2026-10-26T13:36:27.372Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Sathvik",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavlkh-mzi",
+        "timestamp": "2026-10-26T13:36:27.377Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Airport drop, Now, within 1 hour  , from Indiranagar 100ft Rd, 1 or 2 people.\n1 = Send request · 2 = Change something\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpavlmn-zrl",
+        "timestamp": "2026-10-26T13:36:27.455Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavlmy-0ck",
+        "timestamp": "2026-10-26T13:36:27.466Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Request sent! Milo's team will confirm the car and fare here shortly.\n\nPlease ask any doubts if you can, or reply 0 for the Main Menu."
+      },
+      {
+        "id": "MSG-mvpavun4-y07",
+        "timestamp": "2026-10-26T13:36:39.137Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Can I pay cash to the driver?",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpavw4g-r5h",
+        "timestamp": "2026-10-26T13:36:41.056Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Yes — you can settle the fare in cash directly with the driver (they keep 100% of the trip amount). Digital payments are also accepted if you prefer.\n\nTo continue, reply with your next request or 0 for the Main Menu.",
+        "isGroq": true
       }
     ]
   },

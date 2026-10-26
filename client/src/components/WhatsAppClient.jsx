@@ -322,6 +322,9 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
                       <span className="text-[#8696a0]">● Arrived</span>
                       <span className="text-[#8696a0]">● Completed</span>
                     </div>
+                    <div className="mt-2 pt-2 border-t border-[#222e35] text-[11px] text-center text-[#ffd279] font-medium">
+                      Please ask any doubts if you can!
+                    </div>
                   </div>
                 ) : (
                   <div className="whitespace-pre-wrap leading-relaxed">{msg.text}</div>

@@ -222,6 +222,30 @@ async function processInbound(payload) {
     stepDef = miloFlow.M1;
   }
 
+  // If terminal state reached (e.g. D12, B9, X1_DONE, X2_DONE)
+  if (!stepDef) {
+    if (groqEngine.isConfigured()) {
+      const groqReply = await groqEngine.generateGroqResponse({
+        userMessage: rawText,
+        currentStepId: 'COMPLETED',
+        lead,
+        lang,
+        recentMessages: db.getMessages(phone)
+      });
+      if (groqReply) {
+        db.logMessage(phone, { sender: 'bot', text: groqReply, isGroq: true });
+        return { reply: groqReply, step: currentStepId, isGroq: true };
+      }
+    }
+    const terminalMsg = lang === 'hi'
+      ? "कृपया कोई भी सवाल या संदेह हो तो पूछें, या मुख्य मेनू के लिए 0 भेजें।"
+      : lang === 'kn'
+      ? "ದಯವಿಟ್ಟು ಯಾವುದೇ ಸಂದೇಹಗಳಿದ್ದರೆ ಕೇಳಿ, ಅಥವಾ ಮುಖ್ಯ ಮೆನುವಿಗಾಗಿ 0 ಕಳುಹಿಸಿ."
+      : "Please ask any doubts if you can, or reply 0 for the Main Menu.";
+    db.logMessage(phone, { sender: 'bot', text: terminalMsg });
+    return { reply: terminalMsg, step: currentStepId };
+  }
+
   // Friendly greeting check (hi, hello, etc.) on initial menu steps: show clean rule-based step directly!
   const isGreeting = /^(hi|hello|hey|namaste|vanakkam|start|milo|hola)\b/i.test(cleanLower);
   if (isGreeting && (currentStepId === 'L1' || currentStepId === 'M1') && (!flowState.answers || Object.keys(flowState.answers).length === 0)) {

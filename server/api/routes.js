@@ -162,7 +162,9 @@ router.post('/bookings/:id/dispatch', (req, res) => {
     `💵 *Estimated Fare:* ${fare} (${distance})`,
     `⏱️ *ETA:* Driver is 4 mins away`,
     `━━━━━━━━━━━━━━━━━━━━━━`,
-    `Live status: 🟢 *DRIVER EN ROUTE*`
+    `Live status: 🟢 *DRIVER EN ROUTE*`,
+    ``,
+    `Please ask any doubts if you can, or reply 0 for the Main Menu.`
   ].join('\n');
 
   // Deliver confirmation card directly to rider's WhatsApp
