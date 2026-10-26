@@ -14,7 +14,7 @@ const { processInbound, formatStepMessage, getTranslation } = require('../flowRu
 const scheduler = require('../reminders/scheduler');
 const { encryptBuffer, maskAadhaar, isAllowedDocType } = require('../security/encryption');
 const miloConfig = require('../config/miloConfig');
-const grokEngine = require('../ai/grokEngine');
+const groqEngine = require('../ai/groqEngine');
 const db = require('../storage/db');
 
 // Set up encrypted file uploads
@@ -383,18 +383,19 @@ router.post('/ingestion/upload', upload.single('file'), (req, res) => {
 // 5. CONFIGURATION & FACTS SHEET API
 // -------------------------------------------------------------
 
-router.get('/grok/status', (req, res) => {
+// Groq Cloud LLM Status & Key Management (with grok backward compatibility)
+router.get(['/groq/status', '/grok/status'], (req, res) => {
   res.json({
-    configured: grokEngine.isConfigured(),
-    model: grokEngine.GROK_MODEL
+    configured: groqEngine.isConfigured(),
+    model: groqEngine.GROQ_MODEL
   });
 });
 
-router.post('/grok/key', (req, res) => {
+router.post(['/groq/key', '/grok/key'], (req, res) => {
   const { key } = req.body;
   if (key && typeof key === 'string') {
-    grokEngine.setApiKey(key);
-    return res.json({ success: true, configured: grokEngine.isConfigured(), model: grokEngine.GROK_MODEL });
+    groqEngine.setApiKey(key);
+    return res.json({ success: true, configured: groqEngine.isConfigured(), model: groqEngine.GROQ_MODEL });
   }
   return res.status(400).json({ error: 'Valid API key is required' });
 });

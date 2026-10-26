@@ -11,7 +11,7 @@ const miloFlow = require('./flows/milo');
 const miloConfig = require('./config/miloConfig');
 const { parseChoice } = require('./parser/parseChoice');
 const { answerFromFacts } = require('./ai/factsEngine');
-const grokEngine = require('./ai/grokEngine');
+const groqEngine = require('./ai/groqEngine');
 const { maskAadhaar, encryptBuffer } = require('./security/encryption');
 const db = require('./storage/db');
 
@@ -245,16 +245,16 @@ async function processInbound(payload) {
   // If user asked a compound question e.g. "2 but what is the deposit?"
   let extraAnswer = null;
   if (parsed.isChoice && parsed.extraQuestion) {
-    if (grokEngine.isConfigured()) {
-      const grokRes = await grokEngine.generateGrokResponse({
+    if (groqEngine.isConfigured()) {
+      const groqRes = await groqEngine.generateGroqResponse({
         userMessage: parsed.extraQuestion,
         currentStepId,
         lead,
         lang,
         recentMessages: db.getMessages(phone)
       });
-      if (grokRes) {
-        extraAnswer = grokRes;
+      if (groqRes) {
+        extraAnswer = groqRes;
       }
     }
     if (!extraAnswer) {
@@ -275,9 +275,9 @@ async function processInbound(payload) {
 
   // 10. Handle Wrong Reply / Non-choice (Doubts, Free text questions, Conversational AI)
   if (!parsed.isChoice) {
-    // HYBRID ARCHITECTURE: If user types free text or has doubts, Grok LLM understands & answers!
-    if (grokEngine.isConfigured()) {
-      const grokReply = await grokEngine.generateGrokResponse({
+    // HYBRID ARCHITECTURE: If user types free text or has doubts, Groq LLM understands & answers!
+    if (groqEngine.isConfigured()) {
+      const groqReply = await groqEngine.generateGroqResponse({
         userMessage: rawText,
         currentStepId,
         lead,
@@ -285,13 +285,13 @@ async function processInbound(payload) {
         recentMessages: db.getMessages(phone)
       });
 
-      if (grokReply) {
-        db.logMessage(phone, { sender: 'bot', text: grokReply, isGrok: true });
-        return { reply: grokReply, step: currentStepId, isGrok: true };
+      if (groqReply) {
+        db.logMessage(phone, { sender: 'bot', text: groqReply, isGroq: true });
+        return { reply: groqReply, step: currentStepId, isGroq: true };
       }
     }
 
-    // Fallback if Grok key not configured or returned null:
+    // Fallback if Groq key not configured or returned null:
     // Check Rule 4: Is this a free-text question? (e.g. "what is the deposit?")
     const isQuestion = rawText.includes('?') ||
       /^(what|how|why|when|is|can|kya|kitna|yenu|bhav|deposit|rent|charg|shift|doubt|help|tell)/i.test(rawText);

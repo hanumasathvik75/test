@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   Send, Paperclip, Mic, MoreVertical, Phone, Video,
   CheckCheck, MapPin, FileText, Image as ImageIcon,
-  Shield, User, RefreshCw, Sparkles, Key, Bot, Plus, X
+  Shield, User, RefreshCw, Key, Bot, Plus, X, Zap
 } from 'lucide-react';
 
 export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat }) {
@@ -12,23 +12,23 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
   const [loading, setLoading] = useState(false);
   const [showAttachMenu, setShowAttachMenu] = useState(false);
 
-  // Grok LLM integration state
-  const [grokConfigured, setGrokConfigured] = useState(false);
-  const [grokModel, setGrokModel] = useState('grok-2-latest');
-  const [showGrokModal, setShowGrokModal] = useState(false);
-  const [grokKeyInput, setGrokKeyInput] = useState('');
-  const [savingGrokKey, setSavingGrokKey] = useState(false);
-  const [grokStatusMsg, setGrokStatusMsg] = useState('');
+  // Groq LLM integration state (Groq Cloud ultra-fast LPU inference)
+  const [groqConfigured, setGroqConfigured] = useState(false);
+  const [groqModel, setGroqModel] = useState('llama-3.3-70b-versatile');
+  const [showGroqModal, setShowGroqModal] = useState(false);
+  const [groqKeyInput, setGroqKeyInput] = useState('');
+  const [savingGroqKey, setSavingGroqKey] = useState(false);
+  const [groqStatusMsg, setGroqStatusMsg] = useState('');
 
   const messagesEndRef = useRef(null);
 
-  // Check Grok status
-  const checkGrokStatus = async () => {
+  // Check Groq status
+  const checkGroqStatus = async () => {
     try {
-      const res = await fetch('/api/grok/status');
+      const res = await fetch('/api/groq/status');
       const data = await res.json();
-      setGrokConfigured(Boolean(data.configured));
-      if (data.model) setGrokModel(data.model);
+      setGroqConfigured(Boolean(data.configured));
+      if (data.model) setGroqModel(data.model);
     } catch (e) {
       // Ignore in offline mode
     }
@@ -46,7 +46,7 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
   };
 
   useEffect(() => {
-    checkGrokStatus();
+    checkGroqStatus();
     fetchMessages();
     const interval = setInterval(fetchMessages, 1500);
     return () => clearInterval(interval);
@@ -76,31 +76,31 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
     }
   };
 
-  const handleSaveGrokKey = async () => {
-    if (!grokKeyInput.trim()) return;
-    setSavingGrokKey(true);
-    setGrokStatusMsg('');
+  const handleSaveGroqKey = async () => {
+    if (!groqKeyInput.trim()) return;
+    setSavingGroqKey(true);
+    setGroqStatusMsg('');
     try {
-      const res = await fetch('/api/grok/key', {
+      const res = await fetch('/api/groq/key', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ key: grokKeyInput.trim() })
+        body: JSON.stringify({ key: groqKeyInput.trim() })
       });
       const data = await res.json();
       if (data.success) {
-        setGrokConfigured(true);
-        setGrokStatusMsg('Connected to Grok LLM successfully!');
+        setGroqConfigured(true);
+        setGroqStatusMsg('Connected to Groq Cloud (llama-3.3-70b) successfully!');
         setTimeout(() => {
-          setShowGrokModal(false);
-          setGrokStatusMsg('');
+          setShowGroqModal(false);
+          setGroqStatusMsg('');
         }, 1200);
       } else {
-        setGrokStatusMsg('Error: ' + (data.error || 'Failed to save key'));
+        setGroqStatusMsg('Error: ' + (data.error || 'Failed to save key'));
       }
     } catch (e) {
-      setGrokStatusMsg('Network error: ' + e.message);
+      setGroqStatusMsg('Network error: ' + e.message);
     } finally {
-      setSavingGrokKey(false);
+      setSavingGroqKey(false);
     }
   };
 
@@ -141,9 +141,9 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
             <div className="flex items-center gap-2 font-semibold text-[#e9edef]">
               <span>Milo Drive</span>
               <span className="text-[10px] bg-[#00a884] text-black px-1.5 py-0.5 rounded-full font-bold">VERIFIED</span>
-              {grokConfigured ? (
-                <span className="text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/40 px-1.5 py-0.5 rounded-full font-semibold flex items-center gap-1">
-                  <Bot size={10} /> Grok AI Active
+              {groqConfigured ? (
+                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-1.5 py-0.5 rounded-full font-semibold flex items-center gap-1">
+                  <Zap size={10} className="text-emerald-400" /> Groq AI Active
                 </span>
               ) : null}
             </div>
@@ -152,8 +152,8 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
               <span>
                 {lead?.handoffActive
                   ? 'Milo Ops Agent Connected'
-                  : grokConfigured
-                  ? 'Hybrid Flow: Rule-based + Grok AI reasoning'
+                  : groqConfigured
+                  ? 'Hybrid Flow: Rule-based + Groq AI (Llama 3.3)'
                   : 'Book rides · Driver onboarding · Fleet support'}
               </span>
             </div>
@@ -163,18 +163,18 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
         {/* Header Actions */}
         <div className="flex items-center gap-2 md:gap-3 text-[#aebac1]">
 
-          {/* Grok AI Settings Button */}
+          {/* Groq AI Settings Button */}
           <button
-            onClick={() => setShowGrokModal(true)}
+            onClick={() => setShowGroqModal(true)}
             className={`px-2.5 py-1 rounded-full text-xs font-medium flex items-center gap-1.5 border transition-all ${
-              grokConfigured
-                ? 'bg-purple-900/30 text-purple-300 border-purple-500/40 hover:bg-purple-900/50'
+              groqConfigured
+                ? 'bg-emerald-950/40 text-emerald-300 border-emerald-500/40 hover:bg-emerald-900/50'
                 : 'bg-[#182229] text-[#8696a0] border-[#2a3942] hover:text-white hover:border-[#00a884]'
             }`}
-            title="Configure xAI Grok LLM API Key"
+            title="Configure Groq Cloud LLM API Key (groq.com)"
           >
-            <Key size={13} className={grokConfigured ? 'text-purple-400' : 'text-[#8696a0]'} />
-            <span className="hidden sm:inline">{grokConfigured ? 'Grok Connected' : 'Connect Grok'}</span>
+            <Key size={13} className={groqConfigured ? 'text-emerald-400' : 'text-[#8696a0]'} />
+            <span className="hidden sm:inline">{groqConfigured ? 'Groq Connected' : 'Connect Groq'}</span>
           </button>
 
           {/* New Chat Button */}
@@ -222,10 +222,14 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
             <p className="text-xs max-w-xs mb-1">
               Book a ride, onboard as a driver, or ask questions anytime.
             </p>
-            {grokConfigured && (
-              <span className="text-[11px] text-purple-400 bg-purple-950/40 px-2 py-0.5 rounded-full border border-purple-800/40 font-medium mb-3">
-                ⚡ Powered by Grok LLM for instant doubt resolution
+            {groqConfigured ? (
+              <span className="text-[11px] text-emerald-400 bg-emerald-950/40 px-2.5 py-0.5 rounded-full border border-emerald-800/40 font-medium mb-3 flex items-center gap-1">
+                <Zap size={12} /> Powered by Groq LPU (Llama 3.3) for instant answers
               </span>
+            ) : (
+              <p className="text-[11px] text-[#8696a0] mt-1 mb-2">
+                Click "Connect Groq" above to link your Groq Cloud API key.
+              </p>
             )}
             <button
               onClick={() => handleSend('Hi')}
@@ -240,7 +244,7 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
         {messages.map((msg, index) => {
           const isUser = msg.sender === 'user';
           const isOperator = msg.sender === 'operator';
-          const isGrok = msg.isGrok;
+          const isGroq = msg.isGroq || msg.isGrok;
           const buttons = !isUser ? extractQuickButtons(msg.text) : [];
 
           return (
@@ -251,21 +255,21 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
                     ? 'bg-[#005c4b] text-[#e9edef] rounded-tr-sm'
                     : isOperator
                     ? 'bg-[#3b2d54] text-white rounded-tl-sm'
-                    : isGrok
-                    ? 'bg-[#1e2330] border border-purple-500/30 text-[#e9edef] rounded-tl-sm'
+                    : isGroq
+                    ? 'bg-[#182a25] border border-emerald-500/30 text-[#e9edef] rounded-tl-sm'
                     : 'bg-[#202c33] text-[#e9edef] rounded-tl-sm'
                 }`}
               >
-                {/* Operator or Grok badge */}
+                {/* Operator or Groq badge */}
                 {isOperator ? (
                   <div className="text-[11px] text-[#c084fc] font-semibold mb-1 flex items-center gap-1">
                     <User size={11} />
                     <span>{msg.operatorName || 'Milo Ops Agent'}</span>
                   </div>
-                ) : isGrok ? (
-                  <div className="text-[10px] text-purple-400 font-semibold mb-1 flex items-center gap-1">
-                    <Bot size={11} />
-                    <span>Milo AI (Grok LLM)</span>
+                ) : isGroq ? (
+                  <div className="text-[10px] text-emerald-400 font-semibold mb-1 flex items-center gap-1">
+                    <Zap size={11} />
+                    <span>Milo AI (Groq LPU)</span>
                   </div>
                 ) : null}
 
@@ -365,22 +369,22 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
         <div ref={messagesEndRef} />
       </div>
 
-      {/* ── GROK API KEY MODAL ── */}
-      {showGrokModal && (
+      {/* ── GROQ API KEY MODAL ── */}
+      {showGroqModal && (
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-[#202c33] border border-[#2a3942] rounded-2xl w-full max-w-md p-6 shadow-2xl space-y-4">
             <div className="flex items-center justify-between border-b border-[#2a3942] pb-3">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-purple-600/30 flex items-center justify-center text-purple-300">
-                  <Bot size={18} />
+                <div className="w-8 h-8 rounded-full bg-emerald-600/30 flex items-center justify-center text-emerald-400">
+                  <Zap size={18} />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white">Grok LLM Intelligence</h3>
-                  <p className="text-[11px] text-[#8696a0]">Model: {grokModel}</p>
+                  <h3 className="text-sm font-bold text-white">Groq Cloud LPU Intelligence</h3>
+                  <p className="text-[11px] text-[#8696a0]">Model: {groqModel}</p>
                 </div>
               </div>
               <button
-                onClick={() => setShowGrokModal(false)}
+                onClick={() => setShowGroqModal(false)}
                 className="text-[#8696a0] hover:text-white p-1 rounded-full hover:bg-[#2a3942]"
               >
                 <X size={18} />
@@ -389,43 +393,43 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
 
             <div className="text-xs text-[#aebac1] space-y-2">
               <p>
-                <strong className="text-white">Hybrid Architecture:</strong> Standard numbered choices run with zero latency on the rule engine. When customers or drivers type doubts or questions, Grok understands and responds contextually using Milo's business facts.
+                <strong className="text-white">Hybrid Architecture:</strong> Standard numbered choices run with zero latency on the rule engine. When customers or drivers type doubts or questions, Groq's ultra-fast LPU inference (Llama 3.3) understands and responds contextually using Milo's business facts.
               </p>
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-xs font-medium text-[#e9edef]">xAI Grok API Key</label>
+              <label className="text-xs font-medium text-[#e9edef]">Groq Cloud API Key</label>
               <input
                 type="password"
-                placeholder="xai-..."
-                value={grokKeyInput}
-                onChange={e => setGrokKeyInput(e.target.value)}
+                placeholder="gsk_..."
+                value={groqKeyInput}
+                onChange={e => setGroqKeyInput(e.target.value)}
                 className="w-full bg-[#111b21] rounded-lg px-3.5 py-2.5 text-xs text-[#e9edef] placeholder-[#8696a0] border border-[#2a3942] focus:border-[#00a884] outline-none"
               />
               <p className="text-[10px] text-[#8696a0]">
-                Keys can also be set in <code className="text-[#00a884]">.env</code> or Vercel Environment Variables as <code className="text-[#00a884]">GROK_API_KEY</code>.
+                Get a free key from <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="text-[#00a884] underline">console.groq.com/keys</a>. Keys can also be set in <code className="text-[#00a884]">.env</code> or Vercel Environment Variables as <code className="text-[#00a884]">GROQ_API_KEY</code>.
               </p>
             </div>
 
-            {grokStatusMsg && (
-              <div className={`text-xs p-2.5 rounded-lg ${grokStatusMsg.includes('Error') ? 'bg-red-900/30 text-red-300' : 'bg-green-900/30 text-green-300'}`}>
-                {grokStatusMsg}
+            {groqStatusMsg && (
+              <div className={`text-xs p-2.5 rounded-lg ${groqStatusMsg.includes('Error') ? 'bg-red-900/30 text-red-300' : 'bg-green-900/30 text-green-300'}`}>
+                {groqStatusMsg}
               </div>
             )}
 
             <div className="flex items-center justify-end gap-2 pt-2">
               <button
-                onClick={() => setShowGrokModal(false)}
+                onClick={() => setShowGroqModal(false)}
                 className="px-4 py-2 rounded-lg text-xs font-medium text-[#8696a0] hover:text-white"
               >
                 Cancel
               </button>
               <button
-                onClick={handleSaveGrokKey}
-                disabled={savingGrokKey || !grokKeyInput.trim()}
+                onClick={handleSaveGroqKey}
+                disabled={savingGroqKey || !groqKeyInput.trim()}
                 className="px-5 py-2 rounded-lg bg-[#00a884] hover:bg-[#02906f] disabled:bg-[#2a3942] disabled:text-[#8696a0] text-black font-bold text-xs shadow transition-colors flex items-center gap-1.5"
               >
-                {savingGrokKey ? 'Connecting...' : 'Connect Grok'}
+                {savingGroqKey ? 'Connecting...' : 'Connect Groq'}
               </button>
             </div>
           </div>
@@ -478,8 +482,8 @@ export default function WhatsAppClient({ activePhone, setActivePhone, onNewChat 
             placeholder={
               lead?.handoffActive
                 ? 'Chatting with Milo team — type 0 to return to bot...'
-                : grokConfigured
-                ? 'Type a choice number or ask any question/doubt...'
+                : groqConfigured
+                ? 'Type a choice number or ask any question/doubt (Groq AI)...'
                 : 'Type a message or number option...'
             }
             value={inputText}
