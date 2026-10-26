@@ -221,6 +221,102 @@
       "testDrive": null,
       "createdAt": "2026-10-26T13:36:26.286Z",
       "name": "Sathvik"
+    },
+    "+919854192242": {
+      "phone": "+919854192242",
+      "language": "en",
+      "stage": "not_eligible",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "X1",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "1_to_3_yrs",
+            "platforms": [
+              "Rapido"
+            ],
+            "age_band": "under_21",
+            "hub": "hsr",
+            "notify_ok": true
+          },
+          "wrongReplyCount": 1,
+          "updatedTime": "2026-10-26T13:43:08.262Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:41:26.967Z",
+      "badge": "yes",
+      "experience_band": "1_to_3_yrs",
+      "platforms": [
+        "Rapido"
+      ],
+      "age_band": "under_21",
+      "hub": "hsr",
+      "notify_ok": true
+    },
+    "+919833445566": {
+      "phone": "+919833445566",
+      "language": "en",
+      "stage": "not_eligible",
+      "optedOut": false,
+      "handoffActive": true,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "X1_DONE",
+          "answers": {
+            "badge": "no",
+            "notify_ok": true
+          },
+          "wrongReplyCount": 0,
+          "updatedTime": "2026-10-26T13:47:30.654Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:47:25.771Z",
+      "badge": "no",
+      "notify_ok": true
+    },
+    "+919882140985": {
+      "phone": "+919882140985",
+      "language": "en",
+      "stage": "qualified",
+      "optedOut": false,
+      "handoffActive": false,
+      "extra": {
+        "flow": {
+          "branch": "driver",
+          "step": "D7",
+          "answers": {
+            "badge": "yes",
+            "experience_band": "more_than_3_yrs",
+            "platforms": [
+              "None"
+            ],
+            "age_band": "41_50",
+            "hub": "hebbal",
+            "name": "SATHVIK"
+          },
+          "wrongReplyCount": 1,
+          "updatedTime": "2026-10-26T15:00:00.160Z"
+        }
+      },
+      "docs": {},
+      "testDrive": null,
+      "createdAt": "2026-10-26T13:53:39.562Z",
+      "badge": "yes",
+      "experience_band": "more_than_3_yrs",
+      "platforms": [
+        "None"
+      ],
+      "age_band": "41_50",
+      "hub": "hebbal",
+      "name": "SATHVIK"
     }
   },
   "bookings": {
@@ -256,6 +352,21 @@
     }
   },
   "escalations": [
+    {
+      "id": "ESC-mvpb9tcv",
+      "phone": "+919833445566",
+      "step": "X1_DONE",
+      "topic": "Team Handoff",
+      "reason": "User requested agent",
+      "question": "okay so can i contact the team",
+      "leadSummary": {
+        "badge": "no",
+        "notify_ok": true
+      },
+      "status": "open",
+      "createdAt": "2026-10-26T13:47:30.655Z",
+      "notes": ""
+    },
     {
       "id": "ESC-mvpavl6p",
       "phone": "+919877112233",
@@ -1294,6 +1405,588 @@
         "sender": "bot",
         "text": "Yes — you can settle the fare in cash directly with the driver (they keep 100% of the trip amount). Digital payments are also accepted if you prefer.\n\nTo continue, reply with your next request or 0 for the Main Menu.",
         "isGroq": true
+      }
+    ],
+    "+919854192242": [
+      {
+        "id": "MSG-mvpb22g5-wh6",
+        "timestamp": "2026-10-26T13:41:29.189Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb22ga-zal",
+        "timestamp": "2026-10-26T13:41:29.194Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpb24gp-ipu",
+        "timestamp": "2026-10-26T13:41:31.801Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1\\",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb24gw-vpv",
+        "timestamp": "2026-10-26T13:41:31.808Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nWelcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpb28at-tk7",
+        "timestamp": "2026-10-26T13:41:36.773Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb28b4-bq3",
+        "timestamp": "2026-10-26T13:41:36.784Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2cg3-7y6",
+        "timestamp": "2026-10-26T13:41:42.147Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2cgb-9fv",
+        "timestamp": "2026-10-26T13:41:42.155Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2fpm-uq9",
+        "timestamp": "2026-10-26T13:41:46.379Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2fpu-hoh",
+        "timestamp": "2026-10-26T13:41:46.386Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2i44-adv",
+        "timestamp": "2026-10-26T13:41:49.492Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2i4a-yde",
+        "timestamp": "2026-10-26T13:41:49.498Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2l7q-xt5",
+        "timestamp": "2026-10-26T13:41:53.510Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "3",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2l7x-mzq",
+        "timestamp": "2026-10-26T13:41:53.517Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2ocf-63g",
+        "timestamp": "2026-10-26T13:41:57.567Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2ocm-hnz",
+        "timestamp": "2026-10-26T13:41:57.574Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which hub is closest to you?\n1 = HSR Layout · 2 = Electronic City · 3 = Hebbal · 4 = None of these is near me\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2rf5-ddh",
+        "timestamp": "2026-10-26T13:42:01.553Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2rfe-t4v",
+        "timestamp": "2026-10-26T13:42:01.562Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thanks, Driver. Milo needs drivers with a badge licence and at least 1 year driving, age 21–50. Can we message you if this changes?\n1 = Yes · 2 = No\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb2tmx-nlj",
+        "timestamp": "2026-10-26T13:42:04.425Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb2tn6-h2k",
+        "timestamp": "2026-10-26T13:42:04.434Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thank you! We've saved your preference.\n\nPlease ask any doubts if you can, or reply 0 for the Main Menu."
+      },
+      {
+        "id": "MSG-mvpb32nm-f3x",
+        "timestamp": "2026-10-26T13:42:16.114Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "whats the rent for cab",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb32nt-am3",
+        "timestamp": "2026-10-26T13:42:16.121Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Rent is ₹6,300 a week. There is no platform commission on your trips.\n\nThanks, Driver. Milo needs drivers with a badge licence and at least 1 year driving, age 21–50. Can we message you if this changes?\n1 = Yes · 2 = No\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb3wh6-yb8",
+        "timestamp": "2026-10-26T13:42:54.762Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb3whd-xx0",
+        "timestamp": "2026-10-26T13:42:54.769Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thank you! We've saved your preference.\n\nPlease ask any doubts if you can, or reply 0 for the Main Menu."
+      },
+      {
+        "id": "MSG-mvpb46w3-t0w",
+        "timestamp": "2026-10-26T13:43:08.259Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "okay so can i contact the team",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb46wa-0nr",
+        "timestamp": "2026-10-26T13:43:08.266Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nThanks, Driver. Milo needs drivers with a badge licence and at least 1 year driving, age 21–50. Can we message you if this changes?\n1 = Yes · 2 = No\n\n0 = Main menu · 9 = Talk to Milo's team"
+      }
+    ],
+    "+919833445566": [
+      {
+        "id": "MSG-mvpb9plb-jyj",
+        "timestamp": "2026-10-26T13:47:25.776Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9plh-0w8",
+        "timestamp": "2026-10-26T13:47:25.781Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpb9psl-tbv",
+        "timestamp": "2026-10-26T13:47:26.037Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9psv-grl",
+        "timestamp": "2026-10-26T13:47:26.047Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb9puk-z6w",
+        "timestamp": "2026-10-26T13:47:26.108Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9puu-c8u",
+        "timestamp": "2026-10-26T13:47:26.118Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb9pws-tnz",
+        "timestamp": "2026-10-26T13:47:26.188Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9pwy-m0v",
+        "timestamp": "2026-10-26T13:47:26.195Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thanks, Driver. Milo needs drivers with a badge licence and at least 1 year driving, age 21–50. Can we message you if this changes?\n1 = Yes · 2 = No\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpb9pyh-3zo",
+        "timestamp": "2026-10-26T13:47:26.249Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9pym-z2z",
+        "timestamp": "2026-10-26T13:47:26.254Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Thank you! We've saved your preference.\n\nPlease ask any doubts if you can, or reply 0 for the Main Menu."
+      },
+      {
+        "id": "MSG-mvpb9q0d-hgs",
+        "timestamp": "2026-10-26T13:47:26.317Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "5",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9r8c-w75",
+        "timestamp": "2026-10-26T13:47:27.900Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "I’m sorry, “5” isn’t a valid option. Please choose:\n\n- **1** – Yes, you may message us if anything changes  \n- **2** – No, don’t message us  \n- **0** – Main Menu  \n- **9** – Talk to Milo’s support team  \n\nReply with the number that matches your choice.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpb9r9u-9d0",
+        "timestamp": "2026-10-26T13:47:27.954Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9ru8-hxf",
+        "timestamp": "2026-10-26T13:47:28.688Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Got it! You’ve opted out of receiving further messages from us. If you change your mind later, just let us know.\n\nTo continue, reply 0 for the Main Menu or 9 to talk to Milo’s support team.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpb9rw0-h0y",
+        "timestamp": "2026-10-26T13:47:28.752Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9sh8-cr6",
+        "timestamp": "2026-10-26T13:47:29.516Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Sure thing! You’re now opted in to receive messages from Milo. We’ll keep you updated on offers, updates, and support.\n\nTo continue, reply 0 for the Main Menu or 9 to talk to Milo’s support team.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpb9sj2-n51",
+        "timestamp": "2026-10-26T13:47:29.582Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9tbj-8ql",
+        "timestamp": "2026-10-26T13:47:30.607Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "You’re already opted in, so you’ll continue receiving updates and support messages from Milo. Let us know what you’d like to do next—book a ride, learn about rentals, or anything else.\n\nTo continue, reply 0 for the Main Menu or 9 to chat with Milo’s support team.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpb9tcr-8ve",
+        "timestamp": "2026-10-26T13:47:30.651Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "okay so can i contact the team",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpb9ted-297",
+        "timestamp": "2026-10-26T13:47:30.709Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "I've passed this to Milo's team. Someone will reply here between 9 am and 8 pm.\n\nPlease ask any doubts if you can, or reply 0 for the Main Menu."
+      }
+    ],
+    "+919882140985": [
+      {
+        "id": "MSG-mvpbhr8s-3wa",
+        "timestamp": "2026-10-26T13:53:41.164Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "Hi",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbhr8t-8a9",
+        "timestamp": "2026-10-26T13:53:41.166Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Welcome to Milo Drive! Please choose your language:\n1 = English\n2 = हिन्दी\n3 = ಕನ್ನಡ"
+      },
+      {
+        "id": "MSG-mvpbhuje-6t9",
+        "timestamp": "2026-10-26T13:53:45.434Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbhujo-dwc",
+        "timestamp": "2026-10-26T13:53:45.444Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How can we help you today?\n1 = I want to drive with Milo\n2 = Book a ride\n3 = I already drive with Milo\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbi0zw-tw9",
+        "timestamp": "2026-10-26T13:53:53.804Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbi102-z8f",
+        "timestamp": "2026-10-26T13:53:53.810Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Do you have a commercial (badge) driving licence?\n1 = Yes · 2 = No · 3 = I have applied\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbi5jq-ecz",
+        "timestamp": "2026-10-26T13:53:59.702Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbi5jw-g40",
+        "timestamp": "2026-10-26T13:53:59.708Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "How long have you driven a taxi or cab?\n1 = Less than 1 year · 2 = 1 to 3 years · 3 = More than 3 years\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbi8tn-oxv",
+        "timestamp": "2026-10-26T13:54:03.947Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "3",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbi8tq-rkb",
+        "timestamp": "2026-10-26T13:54:03.950Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which apps have you driven for? Reply with all that apply, like 1 3.\n1 = Uber · 2 = Ola · 3 = Rapido · 4 = Other · 5 = None\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbibl2-4ps",
+        "timestamp": "2026-10-26T13:54:07.526Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "5",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbibl8-ne1",
+        "timestamp": "2026-10-26T13:54:07.532Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Your age?\n1 = Under 21 · 2 = 21–30 · 3 = 31–40 · 4 = 41–50 · 5 = Over 50\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbiemy-vk6",
+        "timestamp": "2026-10-26T13:54:11.482Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "4",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbien4-hyt",
+        "timestamp": "2026-10-26T13:54:11.488Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Which hub is closest to you?\n1 = HSR Layout · 2 = Electronic City · 3 = Hebbal · 4 = None of these is near me\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbihx2-yyu",
+        "timestamp": "2026-10-26T13:54:15.734Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "3",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbihx9-dfo",
+        "timestamp": "2026-10-26T13:54:15.741Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "What is your full name, as on your licence?"
+      },
+      {
+        "id": "MSG-mvpbipzq-2zk",
+        "timestamp": "2026-10-26T13:54:26.198Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "SATHVIK",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbipzx-g2f",
+        "timestamp": "2026-10-26T13:54:26.205Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Any questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbivnh-l8v",
+        "timestamp": "2026-10-26T13:54:33.533Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbivnj-357",
+        "timestamp": "2026-10-26T13:54:33.535Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Rent is ₹6,300 a week. There is no platform commission on your trips.\n\nAny questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbj694-k64",
+        "timestamp": "2026-10-26T13:54:47.272Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "I HAVE DOUBT",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbj73g-f8e",
+        "timestamp": "2026-10-26T13:54:48.364Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Sure! Please let us know what you’re unsure about (e.g., rent & deposit, charging, earnings, or anything else).  \n\nReply with the number of the topic:\n1️⃣ Rent & deposit  \n2️⃣ Charging  \n3️⃣ Earnings  \n4️⃣ Other question  \n\nOr type **0** for the Main Menu or **9** to chat with our support team.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpbl2jx-g2t",
+        "timestamp": "2026-10-26T13:56:15.789Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "i want to know about charging",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpbl2jz-6i4",
+        "timestamp": "2026-10-26T13:56:15.791Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Charging is 100% free at all Milo hubs. Partner public chargers are available at ₹12/kWh.\n\nAny questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpbll2s-751",
+        "timestamp": "2026-10-26T13:56:39.796Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "can you talk in telugu",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpblm02-5z6",
+        "timestamp": "2026-10-26T13:56:40.994Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "మైలో హబ్‌లలో ఛార్జింగ్ 100% **ఉచితం**. మీరు మీ వాహనాన్ని ఏ సమయంలోనైనా 8 AM‑8 PM మధ్య తీసుకెళ్లి, పూర్తిగా చార్జ్ చేసుకోవచ్చు. నగరంలోని భాగస్వామ్య ఫాస్ట్‑చార్జర్లకు ₹12/kWh రేటు వర్తిస్తుంది.  \n\n**తదుపరి ఎంపికలు:**  \n1️⃣ రెంట్ & డిపాజిట్ | 2️⃣ ఛార్జింగ్ | 3️⃣ ఆదాయం | 4️⃣ ఇతర ప్రశ్న  \n\n0 = ముఖ్య మెను | 9 = సపోర్ట్ టీమ్‌తో మాట్లాడండి.",
+        "isGroq": true
+      },
+      {
+        "id": "MSG-mvpduvkl-y3q",
+        "timestamp": "2026-10-26T14:59:52.533Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpduvkr-pbc",
+        "timestamp": "2026-10-26T14:59:52.539Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Rent is ₹6,300 a week. There is no platform commission on your trips.\n\nAny questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
+      },
+      {
+        "id": "MSG-mvpdv1gb-np5",
+        "timestamp": "2026-10-26T15:00:00.155Z",
+        "status": "delivered",
+        "sender": "user",
+        "text": "5",
+        "type": "text"
+      },
+      {
+        "id": "MSG-mvpdv1gm-tov",
+        "timestamp": "2026-10-26T15:00:00.166Z",
+        "status": "delivered",
+        "sender": "bot",
+        "text": "Please reply with just the number, like 2.\n\nAny questions before we ask for documents?\n1 = Rent and deposit · 2 = Charging · 3 = How earnings work · 4 = No, continue\n\n0 = Main menu · 9 = Talk to Milo's team"
       }
     ]
   },

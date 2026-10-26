@@ -8,7 +8,10 @@ const fs = require('fs');
 const path = require('path');
 const miloConfig = require('../config/miloConfig');
 
-const DB_PATH = path.join(__dirname, 'milo_db.json');
+const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+const DB_PATH = isServerless 
+  ? path.join('/tmp', 'milo_db.json')
+  : path.join(__dirname, 'milo_db.json');
 
 const INITIAL_STATE = {
   leads: {},
@@ -42,10 +45,16 @@ class MiloDatabase {
         const parsed = JSON.parse(raw);
         return { ...INITIAL_STATE, ...parsed };
       }
+      // Seed fallback in serverless
+      const seedPath = path.join(__dirname, 'milo_db.json');
+      if (fs.existsSync(seedPath)) {
+        const raw = fs.readFileSync(seedPath, 'utf8');
+        const parsed = JSON.parse(raw);
+        return { ...INITIAL_STATE, ...parsed };
+      }
     } catch (e) {
       console.warn('Failed to load DB, initializing fresh:', e.message);
     }
-    this.save(INITIAL_STATE);
     return JSON.parse(JSON.stringify(INITIAL_STATE));
   }
 
@@ -55,7 +64,7 @@ class MiloDatabase {
       fs.writeFileSync(tempPath, JSON.stringify(dataToSave, null, 2), 'utf8');
       fs.renameSync(tempPath, DB_PATH);
     } catch (e) {
-      console.error('Error saving DB:', e.message);
+      console.warn('Storage warning (safe in-memory fallback):', e.message);
     }
   }
 
