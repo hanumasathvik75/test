@@ -6,7 +6,7 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index.js" },
     { "source": "/webhook/(.*)", "destination": "/api/index.js" },
-    { "source": "/((?!assets|favicon|icons).*)", "destination": "/index.html" }
+    { "source": "/((?!assets|favicon\\.svg|icons\\.svg).*)", "destination": "/index.html" }
   ],
   "functions": {
     "api/index.js": {
