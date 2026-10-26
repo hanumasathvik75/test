@@ -198,7 +198,7 @@ async function processInbound(payload) {
   }
 
   // 6. Global 0 (Main Menu) and 9 (Talk to Team) Navigation (Rule 2)
-  if (cleanLower === '0') {
+  if (cleanLower === '0' || cleanLower === 'main menu' || cleanLower === 'menu') {
     flowState.step = 'M1';
     flowState.wrongReplyCount = 0;
     db.updateLead(phone, { extra: lead.extra });
@@ -207,8 +207,12 @@ async function processInbound(payload) {
     return { reply, step: 'M1' };
   }
 
-  if (cleanLower === '9') {
-    return handleTeamHandoff(lead, 'User requested agent via option 9', rawText);
+  const isTeamRequest = cleanLower === '9' ||
+    /\b(contact|talk to|speak to|connect to|reach|call)\s+(the\s+)?(team|agent|human|person|support|milo team)\b/i.test(cleanLower) ||
+    /^(support|agent|helpdesk|customer care)$/i.test(cleanLower);
+
+  if (isTeamRequest) {
+    return handleTeamHandoff(lead, 'User requested agent', rawText);
   }
 
   // 7. Resolve current step definition
@@ -223,7 +227,8 @@ async function processInbound(payload) {
   }
 
   // If terminal state reached (e.g. D12, B9, X1_DONE, X2_DONE)
-  if (!stepDef) {
+  const isTerminalStep = !stepDef || currentStepId.endsWith('_DONE') || ['D12', 'B9', 'COMPLETED'].includes(currentStepId);
+  if (isTerminalStep) {
     if (groqEngine.isConfigured()) {
       const groqReply = await groqEngine.generateGroqResponse({
         userMessage: rawText,
@@ -608,6 +613,7 @@ async function executeChoiceTransition(lead, stepDef, parsed, extraAnswer = null
 
   // X1: Exit - Not eligible yet follow-up
   if (stepDef.id === 'X1') {
+    flowState.step = 'X1_DONE';
     flowState.answers.notify_ok = choice === '1';
     lead.notify_ok = choice === '1';
     db.updateLead(phone, { notify_ok: lead.notify_ok, stage: 'not_eligible', extra: lead.extra });
